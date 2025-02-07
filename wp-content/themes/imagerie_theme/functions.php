@@ -1,4 +1,12 @@
 <?php
+
+
+
+
+
+
+
+
 add_action('after_setup_theme', 'blankslate_setup');
 function blankslate_setup()
 {
@@ -16,26 +24,12 @@ function blankslate_setup()
     }
     register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'blankslate')));
 }
-add_action('admin_notices', 'blankslate_notice');
-function blankslate_notice()
-{
-    $user_id = get_current_user_id();
-    $admin_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    $param = (count($_GET)) ? '&' : '?';
-    if (!get_user_meta($user_id, 'blankslate_notice_dismissed_11') && current_user_can('manage_options'))
-        echo '<div class="notice notice-info"><p><a href="' . esc_url($admin_url), esc_html($param) . 'dismiss" class="alignright" style="text-decoration:none"><big>' . esc_html__('Ⓧ', 'blankslate') . '</big></a>' . wp_kses_post(__('<big><strong>🏆 Thank you for using BlankSlate!</strong></big>', 'blankslate')) . '<p>' . esc_html__('Powering over 10k websites! Buy me a sandwich! 🥪', 'blankslate') . '</p><a href="https://github.com/bhadaway/blankslate/issues/57" class="button-primary" target="_blank"><strong>' . esc_html__('How do you use BlankSlate?', 'blankslate') . '</strong></a> <a href="https://opencollective.com/blankslate" class="button-primary" style="background-color:green;border-color:green" target="_blank"><strong>' . esc_html__('Donate', 'blankslate') . '</strong></a> <a href="https://wordpress.org/support/theme/blankslate/reviews/#new-post" class="button-primary" style="background-color:purple;border-color:purple" target="_blank"><strong>' . esc_html__('Review', 'blankslate') . '</strong></a> <a href="https://github.com/bhadaway/blankslate/issues" class="button-primary" style="background-color:orange;border-color:orange" target="_blank"><strong>' . esc_html__('Support', 'blankslate') . '</strong></a></p></div>';
-}
-add_action('admin_init', 'blankslate_notice_dismissed');
-function blankslate_notice_dismissed()
-{
-    $user_id = get_current_user_id();
-    if (isset($_GET['dismiss']))
-        add_user_meta($user_id, 'blankslate_notice_dismissed_11', 'true', true);
-}
+
 add_action('wp_enqueue_scripts', 'blankslate_enqueue');
 function blankslate_enqueue()
 {
-    wp_enqueue_style('blankslate-style', get_stylesheet_uri());
+    wp_enqueue_style('reset-style', get_stylesheet_uri());
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/main.css');
     wp_enqueue_script('jquery');
 }
 add_action('wp_footer', 'blankslate_footer');
@@ -137,48 +131,4 @@ function blankslate_image_insert_override($sizes)
     unset($sizes['1536x1536']);
     unset($sizes['2048x2048']);
     return $sizes;
-}
-add_action('widgets_init', 'blankslate_widgets_init');
-function blankslate_widgets_init()
-{
-    register_sidebar(array(
-        'name' => esc_html__('Sidebar Widget Area', 'blankslate'),
-        'id' => 'primary-widget-area',
-        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ));
-}
-add_action('wp_head', 'blankslate_pingback_header');
-function blankslate_pingback_header()
-{
-    if (is_singular() && pings_open()) {
-        printf('<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo('pingback_url')));
-    }
-}
-add_action('comment_form_before', 'blankslate_enqueue_comment_reply_script');
-function blankslate_enqueue_comment_reply_script()
-{
-    if (get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
-}
-function blankslate_custom_pings($comment)
-{
-?>
-    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo esc_url(comment_author_link()); ?></li>
-<?php
-}
-add_filter('get_comments_number', 'blankslate_comment_count', 0);
-function blankslate_comment_count($count)
-{
-    if (!is_admin()) {
-        global $id;
-        $get_comments = get_comments('status=approve&post_id=' . $id);
-        $comments_by_type = separate_comments($get_comments);
-        return count($comments_by_type['comment']);
-    } else {
-        return $count;
-    }
 }
