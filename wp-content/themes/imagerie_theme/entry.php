@@ -11,13 +11,17 @@
         } else {
             echo '</h2>';
         } ?>
-        <?php edit_post_link(); ?>
-        <?php if (!is_search()) {
-            get_template_part('entry', 'meta');
-        } ?>
+
     </header>
-    <?php get_template_part('entry', (is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content')); ?>
-    <?php if (is_singular()) {
-        get_template_part('entry-footer');
-    } ?>
+
+    <div class="entry-content" itemprop="mainEntityOfPage">
+        <?php if (has_post_thumbnail()) : ?>
+            <a href="<?php the_post_thumbnail_url('full'); ?>" title="<?php $attachment_id = get_post_thumbnail_id($post->ID);
+                                                                        the_title_attribute(array('post' => get_post($attachment_id))); ?>"><?php the_post_thumbnail('full', array('itemprop' => 'image')); ?></a>
+        <?php endif; ?>
+        <meta itemprop="description" content="<?php echo esc_html(wp_strip_all_tags(get_the_excerpt(), true)); ?>">
+        <?php the_content(); ?>
+        <div class="entry-links"><?php wp_link_pages(); ?></div>
+    </div>
+
 </article>
