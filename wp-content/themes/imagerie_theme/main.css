@@ -20,6 +20,56 @@ b, .bold {
     font-weight: 700;
 }
 
+.hidden {
+  opacity: 0;
+  height: 0px;
+  width: 0px;
+  z-index: -1 !important;
+}
+.close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+
+/*
+ * PROJECTS, THEMES & OBJECTS
+ */
+
+.swiper {
+  position: fixed !important;
+  top: 0; right: 0; bottom: 0; left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9;
+}
+.swiper .theme_bg {
+  height: 100vh;
+  width: 100vw;
+}
+
+.theme_objects {
+  position: absolute;
+  top: 40vh;
+  left: 20vw;
+}
+.about_trigger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.theme_about {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  overflow-y: scroll;
+
+  background-color: white;
+}
+
 
 
 /*
