@@ -30,18 +30,21 @@
 
                     <div class="theme_objects">
                         <?php foreach($theme_objets as $l => $object ) : ?>
-                            <button id="objet_<?php echo $l; ?>" class="objet">
+                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>">
                                 <?php echo $object->post_title; ?>
                                 <?php echo get_the_post_thumbnail($object->ID); ?>
                             </button>
 
                             <div id="modal_<?php echo $k; ?>_<?php echo $l; ?>" class="theme_modal hidden">
-                                <button class="close">Fermer</button>
-                                <?php echo $object->post_title; ?>
-                                <img src="<?php the_field('object_media', $object->ID); ?>">
-                                <?php the_field('object_title', $object->ID); ?>
-                                <?php the_field('object_cartel_short', $object->ID); ?>
-                                <?php the_field('object_cartel_long', $object->ID); ?>
+                                
+                                <div class="modal-inner">
+                                    <button class="close">Fermer</button>
+                                    <?php echo $object->post_title; ?>
+                                    <img src="<?php the_field('object_media', $object->ID); ?>">
+                                    <?php the_field('object_title', $object->ID); ?>
+                                    <?php the_field('object_cartel_short', $object->ID); ?>
+                                    <?php the_field('object_cartel_long', $object->ID); ?>
+                                </div>
                             </div>
                     
 
