@@ -30,15 +30,39 @@ function blankslate_enqueue()
 {
     wp_enqueue_style('reset-style', get_stylesheet_uri());
     wp_enqueue_style('main-style', get_template_directory_uri() . '/main.css');
-    wp_enqueue_script('main-script', get_template_directory_uri() . '/main.js', array('swiper-script'), '1.0.0', true) ;
-
-    // SWIPER
-    wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-    wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js') ;
-    
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/script.js', array('jquery'), null, true);
+    wp_enqueue_script('jquery');
 }
-
-
+add_action('wp_footer', 'blankslate_footer');
+function blankslate_footer()
+{
+?>
+    <script>
+        jQuery(document).ready(function($) {
+            var deviceAgent = navigator.userAgent.toLowerCase();
+            if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
+                $("html").addClass("ios");
+                $("html").addClass("mobile");
+            }
+            if (deviceAgent.match(/(Android)/)) {
+                $("html").addClass("android");
+                $("html").addClass("mobile");
+            }
+            if (navigator.userAgent.search("MSIE") >= 0) {
+                $("html").addClass("ie");
+            } else if (navigator.userAgent.search("Chrome") >= 0) {
+                $("html").addClass("chrome");
+            } else if (navigator.userAgent.search("Firefox") >= 0) {
+                $("html").addClass("firefox");
+            } else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+                $("html").addClass("safari");
+            } else if (navigator.userAgent.search("Opera") >= 0) {
+                $("html").addClass("opera");
+            }
+        });
+    </script>
+<?php
+}
 add_filter('document_title_separator', 'blankslate_document_title_separator');
 function blankslate_document_title_separator($sep)
 {
