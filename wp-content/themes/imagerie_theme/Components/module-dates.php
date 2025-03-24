@@ -3,30 +3,25 @@ $dates = $args['dates'];
 
 
 if( $dates ) :
-    foreach( $dates as $d ) :
 
-        $date = $d['chrono_date'];
+    foreach( $dates as $key => $d ) :
+
         $photo = $d['chrono_photo'];
         $legend = $d['chrono_legend'];
         $title = $d['chrono_title'];
         $descr = $d['chrono_description']; ?>
 
 
-    <section class="module2">
+    <section id="<?php echo $key; ?>" class="module2 <?php echo $key > 0 ? 'hidden' : ''; ?>">
 
         <img class="imgchrono1" src="<?php echo $photo; ?>">
         <?php echo $legend; ?>
 
         <div class="timeline">
-            <p class="textdate"><?php echo $date; ?></p>
-            <hr width="1px" size="75px" />
-            <p class="textdate">1987</p>
-            <hr width="1px" size="75px" />
-            <p class="textdate">2012</p>
-            <hr width="1px" size="75px" />
-            <p class="textdate">2018</p>
-            <hr width="1px" size="75px" />
-            <p class= "textdate">2027</p>
+            <?php foreach( $dates as $key => $e ) : $date = $e['chrono_date']; ?>
+                <p class="textdate" data-id="<?php echo $key; ?>"><?php echo $date; ?></p>
+                <hr width="1px" size="75px" />
+            <?php endforeach; ?>
         </div>
 
         <div class ="containerstep">
@@ -39,4 +34,7 @@ if( $dates ) :
     </section>
         
     <?php endforeach; ?>
+
+
+
 <?php endif; ?>

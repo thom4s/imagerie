@@ -8,6 +8,7 @@
 img {
     max-width: 100%;
     display: block;
+    object-fit: cover;
 }
 
 body {
@@ -15,13 +16,15 @@ body {
     line-height: 1.5;
 }
 
-b {
+b, .bold {
     font-weight: 700;
 }
 
 
 
-
+/*
+ * Module Push Projects
+ */
 
 .pushprojects {
     min-height: 100vh;
@@ -67,10 +70,9 @@ b {
     width: 100%;
     height: auto;
     aspect-ratio: 4/3;
-  object-fit: cover;
+    object-fit: cover;
   }
   
-  Titre
   .containerproj h2 {
     font-size: 1em;
     margin: 20px;
@@ -84,96 +86,63 @@ b {
   }
   
   
-  
-
-  
 
 
-/* Chronologie Section */
+/*
+ * Module Chronologie 
+ */
 
 .module2 {
     display: flex;
 }
   
   .imgchrono1 {
-  
     width: 33%;
-  
     margin: 0px;
-  
     padding: 0px;
-  
   }
-  
-   
   
   figcaption {
-  
     font-style: italic;
-  
     font-weight : lighter;
-  
     font-size: 20px;
-  
     color: #707070;
-  
     margin-top: 15px;
-  
     margin-left : 250px;
-  
   }
-  
-   
   
   .steptitle {
-  
     font-size: 63px;
-  
     color : #2E2E2E;
-  
   }
-  
-   
   
   .step-content {
-  
     color : #707070;
-  
     line-height: 2;
-  
     font-size : 19px;
-  
   }
   
-   
-  
-   
-  
   .textdate {
-  
     font-size: 30px;
-  
     color : #CCCCCC;
-  
     max-width: 50%;
-  
     margin-left : 150px;
     margin-right : 150px;
     margin-top : 2px;
     margin-bottom: 2px;
-  
   }
 
 
-/* Présezntation Section */
+/*
+ * Module Présentation 
+ */
 
 .frameabout {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
   
   .containerabout { 
     width: 33%;
@@ -199,50 +168,46 @@ b {
 
 
 
-/* Frame Section */
+/*
+ * Module Hero 
+ */
+
 .frame {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .frame-background img {
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
 }
-
 
 .frame-overlay {
-    position: absolute;
-    top: 105px;
-    left: 100px;
-    bottom: 0;
-    right: 0;
-    background-color: rbga(0, 0, 0, .8);
-    z-index: 2;
+  position: absolute;
+  top: 105px;
+  left: 100px;
+  bottom: 0;
+  right: 0;
+  background-color: rbga(0, 0, 0, .8);
+  z-index: 2;
 }
-
 
 .title {
-    font-size: 50px;
-    font-weight: 300;
-    line-height: 1.3;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: white;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
 }
 
-
-
-.bold {
-    font-weight: 700;
-}
 
 /* Scroll Button */
 .scrollbutton {
@@ -276,7 +241,6 @@ b {
 }
 
 @keyframes bounce {
-
     0%,
     100% {
         transform: translateY(0);
@@ -287,7 +251,11 @@ b {
     }
 }
 
-/* Framequote Section */
+
+/* 
+ * Module de citation
+ */
+
 .framequote {
     background-color: #be3d0d;
     padding: 3rem 1rem;
@@ -307,28 +275,27 @@ img.framequote-background {
 }
 
 .imgquote {
-    max-width: 50px;
-    position: absolute;
-left: -50px;}
-
-
+  max-width: 50px;
+  position: absolute;
+  left: -50px;
+}
 
 .containertext {
-    position: relative;
-    z-index: 1;
-    max-width: 50%;
-    margin-left: 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
+  margin-left: 40px;
 }
 
 .text-color {
-    font-family: "Inter", serif;
-    font-size: 15px;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
+  font-family: "Inter", serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .author {
-    text-align: right;
-    color: rgba(255, 255, 255, 0.7);
-    font-style: italic;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
 }
