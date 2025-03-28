@@ -1,14 +1,30 @@
-<?php get_header(); ?>
+<?php get_header(); 
+wp_enqueue_style('project-style'); 
+?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 <?php $themes = get_field('project_themes_themes_list');  ?>
 
-<?php the_post_thumbnail(); ?>
-<?php the_title(); ?>
-<?php the_content();  ?>
 
-<a id="show_swiper" href="#">Commencer</a>
+
+<section class= "modale" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"> 
+    <a href="/" class="containerback">← Retour sur le site</a>
+
+    <div class="overlay">
+        <div class="container">
+            <h1 class= "title2"><?php the_title(); ?></h1>
+            
+            <div class="textsubtitle2">
+                <?php the_content();  ?>
+            </div>
+
+            <div class="containerbutton">
+                <a id="show_swiper" href="#" class="nextbutton">COMMENCER</a>
+            </div>
+        </div>
+    </div>
+</section>  
 
 
 
@@ -35,16 +51,27 @@
                                 <?php echo get_the_post_thumbnail($object->ID); ?>
                             </button>
 
-                            <div id="modal_<?php echo $k; ?>_<?php echo $l; ?>" class="theme_modal hidden">
+                            <div id="modal_<?php echo $k; ?>_<?php echo $l; ?>" class="theme_modal containerframe hidden">
                                 
-                                <div class="modal-inner">
-                                    <button class="close">Fermer</button>
-                                    <?php echo $object->post_title; ?>
-                                    <img src="<?php the_field('object_media', $object->ID); ?>">
-                                    <?php the_field('object_title', $object->ID); ?>
-                                    <?php the_field('object_cartel_short', $object->ID); ?>
-                                    <?php the_field('object_cartel_long', $object->ID); ?>
-                                </div>
+                                    <div class="containerlabel">
+                                        <button id="close" class="buttonclose js-close">x</button>
+
+                                        <div class="img_container">
+                                            <img class="label" src="<?php the_field('object_media', $object->ID); ?>">
+                                        </div>
+
+                                        <div class="containerlabel-frame">
+
+                                            <h1><?php the_field('object_title', $object->ID); ?></h1>
+                                            <h2><?php the_field('object_cartel_short', $object->ID); ?></h2>
+                                        
+                                            <div class= "scrollbutton">
+                                                <?php the_field('object_cartel_long', $object->ID); ?>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+
                             </div>
                     
 
@@ -53,14 +80,25 @@
 
                     <button id="about_trigger" class="about_trigger">En savoir plus</button>
 
-                    <div id="about_<?php echo $k; ?>" class="theme_about hidden">
-                        <button class="close">Fermer</button>
-                        <img src="<?php echo $theme_about['bandeau_image']; ?>" alt="">
-                        <h1><?php echo $theme_about['title']; ?></h1>
-                        <?php echo $theme_about['theme_explicatif']; ?>
-                        <?php echo $theme_about['theme_development']; ?>
-                    </div>
 
+                    <div id="about_<?php echo $k; ?>" class="theme_about frametheme hidden"> 
+                        <a href="#" class="backbutton js-close">&#8592; Retour </a>
+        
+                        <div class="band">
+                            <img src="<?php echo $theme_about['bandeau_image']; ?>" alt="Bandeau">
+                            <h1><?php echo $theme_about['title']; ?></h1>
+                        </div>
+                    
+                        <div class="intro"> 
+                            <?php echo $theme_about['theme_explicatif']; ?>
+                        </div>
+                    
+                        <div class="containervideo">
+
+                            <div class= textvideo>
+                                <?php echo $theme_about['theme_development']; ?>
+                            </div>
+                        </div>
 
                 </div>
             </div>

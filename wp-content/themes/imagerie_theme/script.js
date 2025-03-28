@@ -31,7 +31,7 @@ const init = () => {
     const show_swiper_trigger = document.querySelector('#show_swiper')
     const swiper_el = document.querySelector('#swiper_container')
     const show_about_triggers = document.querySelectorAll('.about_trigger')
-    const close_buttons = document.querySelectorAll('.close')
+    const close_buttons = document.querySelectorAll('.js-close')
     const objects_triggers = document.querySelectorAll('.objet')
     const modals = document.querySelectorAll('.theme_modal')
     const abouts = document.querySelectorAll('.theme_about')
