@@ -34,18 +34,22 @@ wp_enqueue_style('project-style');
     <div class="swiper-wrapper">
 
         <?php foreach($themes as $k => $theme ) : ?>
+            <?php $theme_objets = $theme['theme_objets']; ?>
+            <?php $theme_about = $theme['en_savoir_plus']; ?>
+
 
             <div class="swiper-slide">
                 <div id="theme_<?php echo $k; ?>" class="theme" class="">
 
-                    <?php echo $theme['title_theme']; ?>
+                    <div class="theme_title">
+                        <?php echo $theme['title_theme']; ?>
+                    </div>
+                    
                     <img class="theme_bg" src="<?php echo $theme['theme_background']; ?>" />
-                    <?php $theme_objets = $theme['theme_objets']; ?>
-                    <?php $theme_about = $theme['en_savoir_plus']; ?>
-
 
                     <div class="theme_objects">
                         <?php foreach($theme_objets as $l => $object ) : ?>
+
                             <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>">
                                 <?php echo $object->post_title; ?>
                                 <?php echo get_the_post_thumbnail($object->ID); ?>
@@ -72,11 +76,12 @@ wp_enqueue_style('project-style');
                                         </div>
                                     </div>
 
-                            </div>
+                            </div><!-- .theme_modal -->
                     
 
                         <?php endforeach; ?>
-                    </div>
+                    </div><!-- .theme_objects -->
+
 
                     <button id="about_trigger" class="about_trigger">En savoir plus</button>
 
@@ -99,6 +104,7 @@ wp_enqueue_style('project-style');
                                 <?php echo $theme_about['theme_development']; ?>
                             </div>
                         </div>
+                    </div><!-- .theme_about -->
 
                 </div>
             </div>
