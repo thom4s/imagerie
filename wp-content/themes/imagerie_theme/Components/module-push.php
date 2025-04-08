@@ -16,11 +16,14 @@ $projects = $args['projects']; ?>
 
 
                 <div class="containerproj">
-                    <a href="<?php the_permalink($id); ?>">
+                    <a class="projet_link" href="<?php the_permalink($id); ?>">
                         <?php echo $thumb; ?>
-                        <h2><?php echo $title; ?></h2>
-                        <p class="textsubtitle">Le sous-titre</p>
-                        <p>INFORMATIONS COMPLÉMENTAIRES</p>
+
+                        <div class="projet_text">
+                            <h2><?php echo $title; ?></h2>
+                            <p class="textsubtitle">Le sous-titre</p>
+                        </div>
+
                     </a>
                 </div>
                 

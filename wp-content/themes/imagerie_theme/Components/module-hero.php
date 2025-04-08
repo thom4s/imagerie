@@ -1,12 +1,12 @@
 
 
-    <!-- Hero Section -->
-    <section class="frame">
+
+<section class="frame">
         <div class="frame-background">
             <img src="<?php echo $args['image']; ?>">
         </div>
         <div class="frame-overlay">
-            <h1 class="title">
+            <h1 class="frame-title">
                 <?php echo $args['title']; ?>
             </h1>
         </div>

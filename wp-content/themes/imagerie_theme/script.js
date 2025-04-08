@@ -77,7 +77,7 @@ const init = () => {
 
     // MODULE CHRONOLOGIE
     const dates = document.querySelectorAll(".textdate");
-    const sections = document.querySelectorAll(".module2");
+    const sections = document.querySelectorAll(".module_chronologie");
 
     if (!dates || !sections) return;
 

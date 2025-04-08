@@ -12,8 +12,15 @@ img {
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: inherit;
 }
 
 b,
@@ -89,7 +96,7 @@ b,
 
 .pushprojects {
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 8rem 0 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -104,15 +111,6 @@ b,
   text-align: left;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
 .containerframe {
   display: flex;
   justify-content: space-between;
@@ -123,8 +121,13 @@ b,
 .containerproj {
   flex: 1 1 30%;
   padding: 0px;
-  box-sizing: border-box;
-  text-align: left;
+}
+
+.projet_link {
+  display: block;
+}
+.projet_link:hover .projet_text {
+  background-color: #eaeaea;
 }
 
 .containerproj img {
@@ -134,16 +137,24 @@ b,
   object-fit: cover;
 }
 
+.projet_text {
+  padding: 20px;
+  background-color: #F0F0F0;
+}
 .containerproj h2 {
-  font-size: 1em;
-  margin: 20px;
-  text-align: left;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
 }
 
 .containerproj .textsubtitle {
-  font-size: 19px;
+  font-size: 14px;
   color: #555858;
-  text-align: left;
+  text-decoration: none;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 
@@ -153,32 +164,46 @@ b,
  * Module Chronologie 
  */
 
-.module2 {
+.module_chronologie {
   display: flex;
+  justify-content: space-between;
 }
 
-.module2.hidden {
+.module_chronologie.hidden {
   display: none;
 }
 
-.containerstep,
-.timeline {
-  padding: 50px 0;
-}
-
-.timeline {
+.chrono_timeline {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-
-.imgchrono1 {
-  width: 33%;
+.chrono_img {
+  width: 40%;
   margin: 0px;
   padding: 0px;
 }
+.chrono_img img {
+  width: 100%;
+  height: 100%;
+}
+.chrono_img p {
+  font-style: italic;
+  font-size: 14px;
+  color: #707070;
+  padding-left: 10px;
+}
+
+.chrono_content {
+  width: 60%;
+  padding: 50px 100px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
 
 figcaption {
   font-style: italic;
@@ -190,22 +215,18 @@ figcaption {
 }
 
 .steptitle {
-  font-size: 63px;
+  font-size: 50px;
   color: #2E2E2E;
 }
 
 .step-content {
-  color: #707070;
   line-height: 2;
-  font-size: 19px;
+  color: #707070;
 }
 
 .textdate {
   font-size: 30px;
   color: #CCCCCC;
-  max-width: 50%;
-  margin-left: 150px;
-  margin-right: 150px;
   margin-top: 2px;
   margin-bottom: 2px;
   cursor: pointer;
@@ -225,14 +246,13 @@ figcaption {
 
 .containerabout {
   width: 33%;
-  padding: 20px;
+  padding: 20px 0px 20px 50px;
+  color: #707070;
 }
 
 .about-content {
   margin-bottom: 20px;
   line-height: 2;
-  font-size: 19px;
-  color: #333;
 }
 
 .imgabout {
@@ -252,7 +272,8 @@ figcaption {
  * Module Hero 
  */
 
-.frame {
+
+ .frame {
   height: 100vh;
   position: relative;
   display: flex;
@@ -262,12 +283,14 @@ figcaption {
 }
 
 .frame-background img {
+filter:brightness(0.5);
   object-fit: cover;
   position: relative;
   z-index: 1;
   height: 100vh;
   width: 100vw;
 }
+
 
 .frame-overlay {
   position: absolute;
@@ -279,15 +302,20 @@ figcaption {
   z-index: 2;
 }
 
-.title {
-  font-size: 50px;
+
+.frame-title {
+  font-size: 60px;
   font-weight: 300;
   line-height: 1.3;
   letter-spacing: 1px;
+  color:white; 
   text-transform: uppercase;
-  color: white;
 }
 
+
+.bold {
+  font-weight: 700;
+}
 
 /* Scroll Button */
 .scrollbutton {
@@ -324,13 +352,65 @@ figcaption {
 
   0%,
   100% {
-    transform: translateY(0);
+      transform: translateY(0);
   }
 
   50% {
-    transform: translateY(10px);
+      transform: translateY(10px);
   }
 }
+
+/* Framequote Section */
+.framequote {
+  background-color: #be3d0d;
+  padding: 4rem 4rem;
+  min-height: 40vh;
+  position: relative;
+  line-height: 1.5;
+}
+
+img.framequote-background {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  ;
+}
+
+.imgquote {
+  max-width: 50px;
+  position: absolute;
+left: -50px;}
+
+
+
+.containertext {
+  position: relative;
+  z-index: 1;
+  max-width: 40%;
+  margin-left: 40px;
+}
+
+.text-color {
+  font-family: "Inter", serif;
+line-height: 1.6;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.author {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Inter", serif;
+font-size:15px;
+font-weight: 300;
+}
+
 
 
 /* 
