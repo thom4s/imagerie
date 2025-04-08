@@ -35,8 +35,20 @@ const init = () => {
     const objects_triggers = document.querySelectorAll('.objet')
     const modals = document.querySelectorAll('.theme_modal')
     const abouts = document.querySelectorAll('.theme_about')
+    const theme_titles = document.querySelectorAll('.theme_title')
+    
 
 
+    const handle_theme_title = index => {
+
+        const theme_title = document.querySelector(`#theme_${index} .theme_title`);
+
+        if(theme_title) {
+            setTimeout( () => {
+                theme_title.classList.add('out')
+            }, 5000)
+        }
+    }
 
     const closeAllModals = () => {
         modals.forEach( el => el.classList.add('hidden') )
@@ -46,6 +58,7 @@ const init = () => {
     if( show_swiper_trigger ) {
         show_swiper_trigger.addEventListener('click', () => {
             swiper_el.classList.remove('hidden');
+            handle_theme_title(0);
         })
     }
 
@@ -63,6 +76,15 @@ const init = () => {
             closeAllModals()
         })
     })
+    if( theme_titles ) {
+        theme_titles.forEach( el => {
+            el.addEventListener('click', () => { 
+                el.classList.toggle('out');
+                handle_theme_title(el.getAttribute('data-id'));
+            })
+        })
+    }
+    
 
     objects_triggers.forEach( el => {
         el.addEventListener('click', () => {  
@@ -71,7 +93,11 @@ const init = () => {
         })
     })
 
-    swiper.on('slideChange', () => closeAllModals() );
+    swiper.on('slideChange', el =>  {
+        console.log(el)
+        closeAllModals()
+        handle_theme_title(el.activeIndex)
+    });
 
 
     
@@ -101,6 +127,9 @@ const init = () => {
 
         });
     });
+
+
+
 
 
 }

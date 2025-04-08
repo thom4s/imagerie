@@ -44,8 +44,10 @@ wp_enqueue_style('project-style');
             <div class="swiper-slide">
                 <div id="theme_<?php echo $k; ?>" class="theme" class="">
 
-                    <div class="theme_title">
-                        <?php echo $theme['title_theme']; ?>
+                    <div class="theme_title" data-id="<?php echo $k; ?>">
+                        <span>
+                            <?php echo $theme['title_theme']; ?>
+                        </span>
                     </div>
                     
                     <img class="theme_bg" src="<?php echo $theme['theme_background']; ?>" />
