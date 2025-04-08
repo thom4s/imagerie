@@ -52,9 +52,6 @@
         // End loop.
         endwhile;
 
-    // No value.
-    else :
-        // Do something...
     endif;
     ?>
 

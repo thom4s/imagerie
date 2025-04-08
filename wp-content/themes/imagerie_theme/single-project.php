@@ -9,7 +9,7 @@ wp_enqueue_style('project-style');
 
 
 <section class= "modale" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"> 
-    <a href="/" class="containerback">← Retour sur le site</a>
+    <a href="/" class="containerback">← Retour à l'accueil</a>
 
     <div class="overlay">
         <div class="container">
@@ -32,6 +32,9 @@ wp_enqueue_style('project-style');
 <div id="swiper_container" class="swiper hidden">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
+
+        <a href="/" class="button containerback">← Retour à l'accueil</a>
+
 
         <?php foreach($themes as $k => $theme ) : ?>
             <?php $theme_objets = $theme['theme_objets']; ?>
@@ -58,7 +61,9 @@ wp_enqueue_style('project-style');
                             <div id="modal_<?php echo $k; ?>_<?php echo $l; ?>" class="theme_modal containerframe hidden">
                                 
                                     <div class="containerlabel">
-                                        <button id="close" class="buttonclose js-close">x</button>
+                                        <button id="close" class="buttonclose js-close">
+                                            <?php get_template_part('Svgs/cross'); ?>
+                                        </button>
 
                                         <div class="img_container">
                                             <img class="label" src="<?php the_field('object_media', $object->ID); ?>">
@@ -83,11 +88,14 @@ wp_enqueue_style('project-style');
                     </div><!-- .theme_objects -->
 
 
-                    <button id="about_trigger" class="about_trigger">En savoir plus</button>
+                    <button id="about_trigger" class="button about_trigger">
+                        <?php get_template_part('Svgs/moucharabieh'); ?>
+                        <span>En savoir +</span>
+                    </button>
 
 
                     <div id="about_<?php echo $k; ?>" class="theme_about frametheme hidden"> 
-                        <a href="#" class="backbutton js-close">&#8592; Retour </a>
+                        <a href="#" class=" backbutton js-close">&#8592; Retour à l'image</a>
         
                         <div class="band">
                             <img src="<?php echo $theme_about['bandeau_image']; ?>" alt="Bandeau">

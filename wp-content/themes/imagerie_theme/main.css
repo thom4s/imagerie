@@ -17,10 +17,11 @@ body {
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.6;
   font-weight: 300;
   color: inherit;
+  margin-bottom: 18px;
 }
 
 b,
@@ -42,7 +43,27 @@ b,
   z-index: 99;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  transition: all .3s;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 17px;
+  line-height: 1;
+}
 
+
+#footer {
+  background-color:#BE3D0D;
+  padding: 120px;
+  background-image: url('img/bg.png');
+}
 /*
  * PROJECTS, THEMES & OBJECTS
  */
@@ -62,6 +83,11 @@ b,
   height: 100vh;
   width: 100vw;
 }
+.swiper .containerback {
+  z-index: 99;
+  background-color: black;
+  color: white;
+}
 
 .theme_objects {
   position: absolute;
@@ -73,6 +99,12 @@ b,
   position: absolute;
   top: 40px;
   right: 40px;
+  background-color: black;
+  color: white;
+}
+.about_trigger:hover {
+  opacity: .8;
+  cursor: pointer;
 }
 
 .theme_about {
@@ -95,8 +127,7 @@ b,
  */
 
 .pushprojects {
-  min-height: 100vh;
-  padding: 8rem 0 4rem 0;
+  padding: 200px 0 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -125,36 +156,38 @@ b,
 
 .projet_link {
   display: block;
+  text-decoration: none;
 }
 .projet_link:hover .projet_text {
-  background-color: #eaeaea;
+  background-color: #D2CECE33;
 }
 
 .containerproj img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   object-fit: cover;
 }
 
 .projet_text {
-  padding: 20px;
-  background-color: #F0F0F0;
+  padding: 37px 26px;
+  background-color: #E4E4E433;
 }
 .containerproj h2 {
-  font-size: 18px;
+  font-size: 26px;
   text-transform: uppercase;
-  color: #333;
+  color: #2E2E2E;
   text-decoration: none;
 }
 
 .containerproj .textsubtitle {
-  font-size: 14px;
-  color: #555858;
+  font-size: 19px;
+  color: #707070;
   text-decoration: none;
   font-style: italic;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 
@@ -198,10 +231,10 @@ b,
 
 .chrono_content {
   width: 60%;
-  padding: 50px 100px;
+  padding: 112px 100px 112px 150px;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 100px;
 }
 
 figcaption {
@@ -216,6 +249,8 @@ figcaption {
 .steptitle {
   font-size: 50px;
   color: #2E2E2E;
+  margin-bottom: 50px;
+  line-height: 1;
 }
 
 .step-content {
@@ -248,23 +283,19 @@ figcaption {
 
 .containerabout {
   width: 33%;
-  padding: 20px 0px 20px 50px;
+  padding: 140px 0px 100px 50px;
   color: #707070;
 }
-
 .about-content {
   margin-bottom: 20px;
   line-height: 2;
 }
-
 .imgabout {
   width: 60%;
-
 }
-
 .imgabout img {
   width: 100%;
-  height: 400px;
+  height: 550px;
   border-radius: 0px;
 }
 
@@ -306,9 +337,9 @@ filter:brightness(0.5);
 
 
 .frame-title {
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.2;
   letter-spacing: 1px;
   color:white; 
   text-transform: uppercase;
@@ -398,67 +429,21 @@ left: -50px;}
 }
 
 .text-color {
-  font-family: "Inter", serif;
-line-height: 1.6;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
+}
+.text-color p {
+  font-size: inherit;
 }
 
 .author {
   text-align: right;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Inter", serif;
-font-size:15px;
-font-weight: 300;
-}
-
-
-
-/* 
- * Module de citation
- */
-
-.framequote {
-  background-color: #be3d0d;
-  padding: 3rem 1rem;
-  position: relative;
-}
-
-img.framequote-background {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  ;
-}
-
-.imgquote {
-  max-width: 50px;
-  position: absolute;
-  left: -50px;
-}
-
-.containertext {
-  position: relative;
-  z-index: 1;
-  max-width: 50%;
-  margin-left: 40px;
-}
-
-.text-color {
-  font-family: "Inter", serif;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
+  float: right;
 }
 
-.author {
-  text-align: right;
-  color: rgba(255, 255, 255, 0.7);
-  font-style: italic;
-}
+
+
