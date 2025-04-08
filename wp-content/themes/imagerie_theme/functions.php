@@ -22,9 +22,13 @@ function blankslate_setup()
 add_action('wp_enqueue_scripts', 'blankslate_enqueue');
 function blankslate_enqueue()
 {
+
+    // STYLES
     wp_enqueue_style('reset-style', get_stylesheet_uri());
-    wp_enqueue_style('main-style', get_template_directory_uri() . '/main.css');
-    wp_register_style('project-style', get_template_directory_uri() . '/project.css');
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/main.css', array(), filemtime(get_template_directory() . '/main.css'), false);
+    wp_register_style('project-style', get_template_directory_uri() . '/project.css', array(), filemtime(get_template_directory() . '/project.css'), false);
+
+    // SCRIPTS
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/script.js', array('swiper-script'), null, true);
 
     // SWIPER
