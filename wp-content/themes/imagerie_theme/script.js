@@ -31,6 +31,7 @@ const init = () => {
     const show_swiper_trigger = document.querySelector('#show_swiper')
     const swiper_el = document.querySelector('#swiper_container')
     const show_about_triggers = document.querySelectorAll('.about_trigger')
+    const close_about_triggers = document.querySelectorAll('.close_about')
     const close_buttons = document.querySelectorAll('.js-close')
     const objects_triggers = document.querySelectorAll('.objet')
     const modals = document.querySelectorAll('.theme_modal')
@@ -54,6 +55,16 @@ const init = () => {
         modals.forEach( el => el.classList.add('hidden') )
         abouts.forEach( el => el.classList.add('hidden') )
     }
+    const hideCtas = () => {
+        document.querySelector('.swiper .containerback').classList.add('hidden');
+        document.querySelector('.swiper-button-prev').classList.add('hidden');
+        document.querySelector('.swiper-button-next').classList.add('hidden');
+    }
+    const showCtas = () => {
+        document.querySelector('.swiper .containerback').classList.remove('hidden');
+        document.querySelector('.swiper-button-prev').classList.remove('hidden');
+        document.querySelector('.swiper-button-next').classList.remove('hidden');
+    }
     
     if( show_swiper_trigger ) {
         show_swiper_trigger.addEventListener('click', () => {
@@ -66,13 +77,22 @@ const init = () => {
         show_about_triggers.forEach( el => {
             el.addEventListener('click', () => { 
                 closeAllModals()
+                hideCtas()
                 el.nextElementSibling.classList.remove('hidden');
             })
         })
     }
+    if( close_about_triggers ) {
+        close_about_triggers.forEach( el => {
+            el.addEventListener('click', () => { 
+                closeAllModals()
+            })
+        })
+    }
+    
     close_buttons.forEach( el => {
         el.addEventListener('click', () => {  
-            //el.parentElement.classList.add('hidden');
+            showCtas()
             closeAllModals()
         })
     })

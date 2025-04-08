@@ -36,7 +36,7 @@ wp_enqueue_style('project-style');
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
 
-        <a href="/" class="button containerback">← Retour à l'accueil</a>
+        <a href="/" class="button containerback ">← Retour à l'accueil</a>
 
 
         <?php foreach($themes as $k => $theme ) : ?>

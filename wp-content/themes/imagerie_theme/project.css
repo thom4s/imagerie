@@ -39,6 +39,13 @@
   .containerback:hover {
     text-decoration: underline; 
   }
+
+  .close_about {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9;
+  }
   
   .container {
     text-align: left;

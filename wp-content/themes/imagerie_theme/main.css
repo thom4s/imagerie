@@ -49,7 +49,7 @@ b,
   align-items: center;
   gap: 10px;
   opacity: 1;
-  transition: all .3s;
+  transition: opacity .3s;
   text-transform: uppercase;
   padding: 12px 20px;
   border-radius: 20px;
@@ -127,7 +127,7 @@ b,
   right: 0;
   display: flex;
   justify-content: center;
-  transition: all .5s;
+  transition: opacity .5s;
 }
 .theme_title.out {
   top: -50px;
