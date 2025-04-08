@@ -204,7 +204,6 @@ b,
   gap: 60px;
 }
 
-
 figcaption {
   font-style: italic;
   font-weight: lighter;
@@ -232,6 +231,9 @@ figcaption {
   cursor: pointer;
 }
 
+.textdate.active {
+  font-weight: 900;
+}
 
 /*
  * Module Présentation 

@@ -74,8 +74,12 @@ const init = () => {
     swiper.on('slideChange', () => closeAllModals() );
 
 
+    
 
-    // MODULE CHRONOLOGIE
+    /*
+     * MODULE CHRONOLOGIE
+     */
+
     const dates = document.querySelectorAll(".textdate");
     const sections = document.querySelectorAll(".module_chronologie");
 
@@ -86,10 +90,15 @@ const init = () => {
             const id = e.target.getAttribute("data-id");
 
             // Hide all sections
-            sections.forEach(section => section.classList.add("hidden"));
+            sections.forEach(section => {
+                section.classList.add("hidden")
+                section.querySelector('.active')?.classList.remove('active');
+            });
 
             // Display the section with the same id as the clicked date
             document.getElementById(id).classList.remove("hidden");
+            document.getElementById(id).querySelector(`[data-id='${id}']`).classList.add("active");
+
         });
     });
 
