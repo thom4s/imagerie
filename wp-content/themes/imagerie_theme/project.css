@@ -65,21 +65,20 @@
   }
   
   .nextbutton {
-    display: inline-block;
-    justify-content: center;
     background-color: #B49053;
     color: #1B000D;
     padding: 12px 24px;
     text-decoration: none;
-    border-radius: 90px;
-    font-family: 'Inter'; 
+  }
+  .nextbutton path {
+    fill: black;
   }
   
   .nextbutton:hover {
      background-color: white;
     color: #1B000D;
     border : 2px solid #1B000D; 
-    
+
   }
 
 
@@ -264,4 +263,23 @@
       width: 60%; 
       margin: 0 auto; 
     font-size: 16px;
+  }
+
+
+
+  .swiper-button-next, .swiper-button-prev {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 16px;
+    color: white;
   }

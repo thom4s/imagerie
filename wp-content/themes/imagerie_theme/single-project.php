@@ -20,7 +20,10 @@ wp_enqueue_style('project-style');
             </div>
 
             <div class="containerbutton">
-                <a id="show_swiper" href="#" class="nextbutton">COMMENCER</a>
+                <a id="show_swiper" href="#" class="button nextbutton">
+                    <?php get_template_part('Svgs/moucharabieh'); ?>
+                    <span>COMMENCER</span>
+                </a>
             </div>
         </div>
     </div>
