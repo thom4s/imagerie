@@ -22,7 +22,8 @@
 
                 get_template_part('Components/module', 'citation', array(
                     'content' =>  get_sub_field('module_content'),
-                    'image' => get_sub_field('module_background')
+                    'image' => get_sub_field('module_background'),
+                    'auteur' => get_sub_field('module_auteur')
                 )); 
                           
 

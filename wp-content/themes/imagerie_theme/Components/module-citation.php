@@ -10,6 +10,6 @@
                 <blockquote class="text-color">
                     <?php echo $args['content']; ?>
                 </blockquote>
-                <cite class="author"><br>— Osvaldo CUEVAS SANCHEZ -</cite>
+                <cite class="author"><br>— <?php echo $args['auteur']; ?> -</cite>
         </div>
     </section>

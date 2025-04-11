@@ -113,7 +113,7 @@ wp_enqueue_style('project-style');
                     
                         <div class="containervideo">
 
-                            <div class= textvideo>
+                            <div class="textvideo">
                                 <?php echo $theme_about['theme_development']; ?>
                             </div>
                         </div>
