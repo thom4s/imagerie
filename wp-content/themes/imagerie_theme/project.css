@@ -16,13 +16,13 @@
   
   .overlay {
     position: fixed;
-    padding: 115px;
+    padding: 115px 15%;
     top: 0;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
-    max-width: 600px;;
+    max-width: 1100px;
     background-color: rgba(38, 50, 71, 0.86);
     z-index: 1;
   }
@@ -32,8 +32,6 @@
     top: 20px;
     left: 20px;
     text-decoration: none;
-    color: #000000;
-    font-size: 17px;
   }
   
   .containerback:hover {
@@ -210,7 +208,7 @@
     
   .band {
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     position: relative;
   }
   
@@ -223,12 +221,12 @@
   .band h1 {
     position: absolute;
     left: 150px;
-    top: 70%;
+    top: 50%;
     transform: translateY(-50%);
     text-transform: uppercase;
     margin: 0;
     color: white;
-    font-size: 75px;
+    font-size: 60px;
     line-height: 1;
     font-weight: bold;
   }

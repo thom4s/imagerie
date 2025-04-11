@@ -9,7 +9,7 @@ wp_enqueue_style('project-style');
 
 
 <section class= "modale" style="background-image: url('<?php the_field('introduction_cover_2'); ?>')"> 
-    <a href="/" class="containerback">← Retour à l'accueil</a>
+    <a href="/" class="button btn-black containerback">← &nbsp; Retour à l'accueil</a>
 
     <div class="overlay">
         <div class="container">
@@ -33,11 +33,11 @@ wp_enqueue_style('project-style');
 
 
 <div id="swiper_container" class="swiper hidden">
+
+    <a href="/" class="button containerback ">← Retour à l'accueil</a>
+
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-
-        <a href="/" class="button containerback ">← Retour à l'accueil</a>
-
 
         <?php foreach($themes as $k => $theme ) : ?>
             <?php $theme_objets = $theme['theme_objets']; ?>
@@ -58,7 +58,7 @@ wp_enqueue_style('project-style');
                     <div class="theme_objects">
                         <?php foreach($theme_objets as $l => $object ) : ?>
 
-                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>">
+                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>" style="<?php // TODOOOOOO; ?>">
                                 <?php echo $object->post_title; ?>
                                 <?php echo get_the_post_thumbnail($object->ID); ?>
                             </button>

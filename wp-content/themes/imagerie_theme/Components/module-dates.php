@@ -16,7 +16,7 @@ if( $dates ) :
 
             <div class="chrono_img">
                 <img class="" src="<?php echo $photo; ?>">
-                <p><?php echo $legend; ?></p>
+                <p class="caption"><?php echo $legend; ?></p>
             </div>
 
 
