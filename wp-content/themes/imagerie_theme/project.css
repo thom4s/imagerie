@@ -25,6 +25,8 @@
     max-width: 1100px;
     background-color: rgba(38, 50, 71, 0.86);
     z-index: 1;
+    height: 100%;
+    overflow-y: scroll;
   }
   
   .containerback {
@@ -98,6 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
   
   .containerlabel {
