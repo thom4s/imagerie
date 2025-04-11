@@ -60,8 +60,8 @@ wp_enqueue_style('project-style');
                         <?php foreach($theme_objets as $l => $object ) : ?>
 
                             <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>" style="<?php echo $coordonees_objects[$l]['coordonnees']; ?>">
-                                <?php echo $object->post_title; ?>
-                                <?php echo get_the_post_thumbnail($object->ID); ?>
+                                <?php get_template_part('Svgs/MouchaButt'); ?>
+                                <?php //echo $object->post_title; ?>
                             </button>
 
                             <div id="modal_<?php echo $k; ?>_<?php echo $l; ?>" class="theme_modal containerframe hidden">

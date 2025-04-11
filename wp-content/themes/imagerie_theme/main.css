@@ -101,6 +101,9 @@ b,
 }
 .theme_objects .objet {
   position: absolute;
+  border: none;
+  background: none;
+  opacity: .9;
 }
 
 .about_trigger {
@@ -261,6 +264,7 @@ b,
   width: 40%;
   margin: 0px;
   padding: 0px;
+  position: relative;
 }
 .chrono_img img {
   width: 100%;
@@ -271,6 +275,8 @@ b,
   font-size: 14px;
   color: #707070;
   padding: 5px 10px;
+  position: absolute;
+  bottom: -20px
 }
 
 .chrono_content {
