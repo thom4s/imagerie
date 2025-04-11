@@ -8,7 +8,7 @@ wp_enqueue_style('project-style');
 
 
 
-<section class= "modale" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"> 
+<section class= "modale" style="background-image: url('<?php the_field('introduction_cover_2'); ?>')"> 
     <a href="/" class="containerback">← Retour à l'accueil</a>
 
     <div class="overlay">
@@ -140,4 +140,4 @@ wp_enqueue_style('project-style');
 <?php endwhile;
 endif; ?>
 
-<?php get_footer(); ?>
+<?php get_footer('clean'); ?>
