@@ -104,8 +104,12 @@ b,
   border: none;
   background: none;
   opacity: .9;
+  transition: all .5s;
 }
-
+.theme_objects .objet:hover {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
 .about_trigger {
   position: absolute;
   top: 20px;
@@ -275,8 +279,7 @@ b,
   font-size: 14px;
   color: #707070;
   padding: 5px 10px;
-  position: absolute;
-  bottom: -20px
+
 }
 
 .chrono_content {
@@ -337,7 +340,7 @@ figcaption {
 
 .containerabout {
   width: 33%;
-  padding: 140px 0px 100px 50px;
+  padding: 0 0px 0 50px;
   color: #707070;
 }
 .about-content {
