@@ -41,6 +41,7 @@ wp_enqueue_style('project-style');
 
         <?php foreach($themes as $k => $theme ) : ?>
             <?php $theme_objets = $theme['theme_objets']; ?>
+            <?php $coordonees_objects = $theme['coordonees_objects'];// var_dump($coordonees_objects); ?>
             <?php $theme_about = $theme['en_savoir_plus']; ?>
 
 
@@ -58,7 +59,7 @@ wp_enqueue_style('project-style');
                     <div class="theme_objects">
                         <?php foreach($theme_objets as $l => $object ) : ?>
 
-                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>" style="<?php // TODOOOOOO; ?>">
+                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>" style="<?php echo $coordonees_objects[$l]['coordonnees']; ?>">
                                 <?php echo $object->post_title; ?>
                                 <?php echo get_the_post_thumbnail($object->ID); ?>
                             </button>

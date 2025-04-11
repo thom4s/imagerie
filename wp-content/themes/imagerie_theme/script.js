@@ -6,7 +6,7 @@ const init = () => {
 
     const swiper = new Swiper('.swiper', {
         // Optional parameters
-        loop: false,
+        loop: true,
     
         // If we need pagination
         pagination: {
