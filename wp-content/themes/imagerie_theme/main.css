@@ -66,6 +66,23 @@ b,
   text-align: right;
 }
 
+
+
+.the_content {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+.the_content_inner {
+  width: 90%;
+  max-width: 900px;
+
+}
+.the_content h1 {
+  font-size: 60px;
+  margin-bottom: 100px;
+}
+
 #footer {
   background-color:#BE3D0D;
   padding: 120px;
