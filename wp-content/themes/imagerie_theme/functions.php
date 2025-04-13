@@ -36,6 +36,11 @@ function blankslate_enqueue()
     wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js') ;
 }
 
+
+remove_filter( 'the_content', 'wpautop' );
+
+
+
 add_filter('document_title_separator', 'blankslate_document_title_separator');
 function blankslate_document_title_separator($sep)
 {

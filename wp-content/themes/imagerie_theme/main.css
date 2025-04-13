@@ -56,8 +56,15 @@ b,
   border: none;
   font-size: 17px;
   line-height: 1;
+  cursor: pointer;
 }
-
+.btn-black {
+  background-color: black;
+  color: white;
+}
+.text-right {
+  text-align: right;
+}
 
 #footer {
   background-color:#BE3D0D;
@@ -90,20 +97,28 @@ b,
 }
 
 .theme_objects {
-  position: absolute;
-  top: 40vh;
-  left: 20vw;
-}
 
+}
+.theme_objects .objet {
+  position: absolute;
+  border: none;
+  background: none;
+  opacity: .9;
+  transition: all .5s;
+}
+.theme_objects .objet:hover {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
 .about_trigger {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
   background-color: black;
   color: white;
 }
 .about_trigger:hover {
-  opacity: .8;
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -152,7 +167,9 @@ b,
   height: 72px;
   z-index: -2;
 }
-
+.theme_title.out span:after {
+  background-image: url('img/group-rotated.png');
+}
 
 
 
@@ -251,16 +268,18 @@ b,
   width: 40%;
   margin: 0px;
   padding: 0px;
+  position: relative;
 }
 .chrono_img img {
   width: 100%;
   height: 100%;
 }
-.chrono_img p {
+.caption {
   font-style: italic;
   font-size: 14px;
   color: #707070;
-  padding-left: 10px;
+  padding: 5px 10px;
+
 }
 
 .chrono_content {
@@ -299,6 +318,10 @@ figcaption {
   margin-bottom: 2px;
   cursor: pointer;
 }
+.textdate:hover {
+  font-weight: 900;
+
+}
 
 .textdate.active {
   font-weight: 900;
@@ -317,7 +340,7 @@ figcaption {
 
 .containerabout {
   width: 33%;
-  padding: 140px 0px 100px 50px;
+  padding: 0 0px 0 50px;
   color: #707070;
 }
 .about-content {
@@ -434,6 +457,8 @@ filter:brightness(0.5);
   min-height: 40vh;
   position: relative;
   line-height: 1.5;
+  display: flex;
+  align-items: center;
 }
 
 img.framequote-background {
@@ -458,7 +483,7 @@ left: -50px;}
 .containertext {
   position: relative;
   z-index: 1;
-  max-width: 40%;
+  max-width: 60%;
   margin-left: 40px;
 }
 

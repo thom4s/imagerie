@@ -8,8 +8,8 @@ wp_enqueue_style('project-style');
 
 
 
-<section class= "modale" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"> 
-    <a href="/" class="containerback">← Retour à l'accueil</a>
+<section class= "modale" style="background-image: url('<?php the_field('introduction_cover_2'); ?>')"> 
+    <a href="/" class="button btn-black containerback">← &nbsp; Retour à l'accueil</a>
 
     <div class="overlay">
         <div class="container">
@@ -33,14 +33,15 @@ wp_enqueue_style('project-style');
 
 
 <div id="swiper_container" class="swiper hidden">
+
+    <a href="/" class="button containerback ">← Retour à l'accueil</a>
+
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
 
-        <a href="/" class="button containerback ">← Retour à l'accueil</a>
-
-
         <?php foreach($themes as $k => $theme ) : ?>
             <?php $theme_objets = $theme['theme_objets']; ?>
+            <?php $coordonees_objects = $theme['coordonees_objects'];// var_dump($coordonees_objects); ?>
             <?php $theme_about = $theme['en_savoir_plus']; ?>
 
 
@@ -58,9 +59,9 @@ wp_enqueue_style('project-style');
                     <div class="theme_objects">
                         <?php foreach($theme_objets as $l => $object ) : ?>
 
-                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>">
-                                <?php echo $object->post_title; ?>
-                                <?php echo get_the_post_thumbnail($object->ID); ?>
+                            <button id="objet_<?php echo $k; ?>_<?php echo $l; ?>" class="objet" data-objectid="<?php echo $k; ?>_<?php echo $l; ?>" style="<?php echo $coordonees_objects[$l]['coordonnees']; ?>">
+                                <?php get_template_part('Svgs/MouchaButt'); ?>
+                                <?php //echo $object->post_title; ?>
                             </button>
 
                             <div id="modal_<?php echo $k; ?>_<?php echo $l; ?>" class="theme_modal containerframe hidden">
@@ -113,7 +114,7 @@ wp_enqueue_style('project-style');
                     
                         <div class="containervideo">
 
-                            <div class= textvideo>
+                            <div class="textvideo">
                                 <?php echo $theme_about['theme_development']; ?>
                             </div>
                         </div>
@@ -140,4 +141,4 @@ wp_enqueue_style('project-style');
 <?php endwhile;
 endif; ?>
 
-<?php get_footer(); ?>
+<?php get_footer('clean'); ?>
