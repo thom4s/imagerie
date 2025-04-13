@@ -169,7 +169,7 @@ b,
   right: 0;
   display: flex;
   justify-content: center;
-  transition: opacity .5s;
+  transition: all .5s;
 }
 .theme_title.out {
   top: -50px;
@@ -190,9 +190,11 @@ b,
   left: calc(50% - 35px);
   background-image: url('img/group.png');
   background-repeat: no-repeat;
+  background-size: cover;
   width: 72px;
   height: 72px;
   z-index: -2;
+  cursor: pointer;
 }
 .theme_title.out span:after {
   background-image: url('img/group-rotated.png');
