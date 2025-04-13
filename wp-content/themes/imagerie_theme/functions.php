@@ -40,6 +40,16 @@ function blankslate_enqueue()
 remove_filter( 'the_content', 'wpautop' );
 
 
+if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
+
+	function mytheme_register_nav_menu(){
+		register_nav_menus( array(
+	    	'footer_menu'  => __( 'Footer Menu', 'text_domain' ),
+		) );
+	}
+	add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
+}
+
 
 add_filter('document_title_separator', 'blankslate_document_title_separator');
 function blankslate_document_title_separator($sep)

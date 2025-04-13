@@ -71,6 +71,16 @@ b,
   padding: 120px;
   background-image: url('img/bg.png');
 }
+
+#footer .menu ul {
+  display: flex;
+  gap: 20px;
+}
+#footer .menu a {
+  color: #222;
+  text-decoration: none;
+}
+
 /*
  * PROJECTS, THEMES & OBJECTS
  */
