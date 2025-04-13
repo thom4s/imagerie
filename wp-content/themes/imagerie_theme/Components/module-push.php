@@ -10,7 +10,7 @@ $projects = $args['projects']; ?>
                 $id = $p->ID;
                 $title = $p->post_title;
                 $thumb = get_the_post_thumbnail($id, 'medium');
-                $subtitle = get_field('', $id);
+                $subtitle = get_field('introduction_title_1', $id);
 
             ?>
 
@@ -21,7 +21,7 @@ $projects = $args['projects']; ?>
 
                         <div class="projet_text">
                             <h2><?php echo $title; ?></h2>
-                            <p class="textsubtitle">Le sous-titre</p>
+                            <p class="textsubtitle"><?php echo $subtitle; ?></p>
                         </div>
 
                     </a>
