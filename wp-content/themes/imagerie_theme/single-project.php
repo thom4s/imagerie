@@ -20,7 +20,7 @@ wp_enqueue_style('project-style');
             </div>
 
             <div class="containerbutton">
-                <a id="show_swiper" href="#" class="button nextbutton">
+                <a id="show_swiper" href="<?php the_field('introduction_btn_link'); ?>" target="<?php echo get_field('introduction_btn_link') !== "#" ? '_blank' : ''; ?>" class="button nextbutton">
                     <?php get_template_part('Svgs/moucharabieh'); ?>
                     <span>COMMENCER</span>
                 </a>
