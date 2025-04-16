@@ -9,7 +9,7 @@ $projects = $args['projects']; ?>
             foreach( $projects as $p ) :
                 $id = $p->ID;
                 $title = $p->post_title;
-                $thumb = get_the_post_thumbnail($id, 'medium');
+                $thumb = get_the_post_thumbnail($id, 'large');
                 $subtitle = get_field('introduction_title_1', $id);
 
             ?>
