@@ -87,6 +87,8 @@ b,
   background-color:#BE3D0D;
   padding: 120px;
   background-image: url('img/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #footer .menu ul {
