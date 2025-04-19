@@ -237,8 +237,10 @@ b,
 }
 
 .projet_link {
-  display: block;
+  display: flex;
   text-decoration: none;
+  flex-direction: column;
+  height: 100%;
 }
 .projet_link:hover .projet_text {
   background-color: #D2CECE33;
@@ -254,6 +256,7 @@ b,
 .projet_text {
   padding: 37px 26px;
   background-color: #E4E4E433;
+  flex: 1 1 auto;
 }
 .containerproj h2 {
   font-size: 26px;
