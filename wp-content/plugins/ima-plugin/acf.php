@@ -2,13 +2,13 @@
 
 function anha_acf_load_json($paths) {
     $paths = array(
-        ANHA_DIR . '/acf-json'
+        IMA_DIR . '/acf-json'
     );
     return $paths;
 }
 
 function anha_acf_save_json($paths) {
-    $paths = ANHA_DIR . '/acf-json';
+    $paths = IMA_DIR . '/acf-json';
     return $paths;
 }
 
