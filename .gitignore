@@ -2,3 +2,4 @@
 /.htaccess
 /wp-config.php
 uploads
+wp-content/plugins/ima-plugin/.DS_Store
