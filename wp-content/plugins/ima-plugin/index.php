@@ -11,7 +11,8 @@ define('IMA_PATH', '/'.str_replace(ABSPATH, '', IMA_DIR));
 
 
 require_once(IMA_DIR.'/acf.php');
-//require_once(ANHA_DIR.'/cpt/cpt-projets.php');
+require_once(IMA_DIR.'/cpt/cpt-projets.php');
+require_once(IMA_DIR.'/cpt/cpt-objets.php');
 //require_once(ANHA_DIR.'/taxonomies/tax-client.php');
 
 
