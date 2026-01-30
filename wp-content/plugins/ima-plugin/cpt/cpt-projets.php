@@ -9,6 +9,15 @@ function cptui_register_my_cpts_project() {
 	$labels = [
 		"name" => esc_html__( "Projets", "blankslate" ),
 		"singular_name" => esc_html__( "Projet", "blankslate" ),
+		'menu_name'             => _x( 'Projets', 'Admin Menu text', 'textdomain' ),
+		'name_admin_bar'        => _x( 'Projet', 'Add New on Toolbar', 'textdomain' ),
+		'add_new'               => __( 'Ajouter un Projet', 'textdomain' ),
+		'add_new_item'          => __( 'Ajouter nouveau Projet', 'textdomain' ),
+		'new_item'              => __( 'Nouveau Projet', 'textdomain' ),
+		'edit_item'             => __( 'Editer le Projet', 'textdomain' ),
+		'view_item'             => __( 'Voir Projet', 'textdomain' ),
+		'all_items'             => __( 'Tous les Projets', 'textdomain' ),
+		'search_items'          => __( 'Rechercher Projet', 'textdomain' )
 	];
 
 	$args = [
