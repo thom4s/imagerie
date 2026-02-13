@@ -1,6 +1,6 @@
 {
     "key": "group_698f379a39b28",
-    "title": "(2025) Modules Accueil 2025",
+    "title": "(2025) Modules Accueil",
     "fields": [
         {
             "key": "field_698f379a4b118",
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1770993723
+    "modified": 1770994481
 }
