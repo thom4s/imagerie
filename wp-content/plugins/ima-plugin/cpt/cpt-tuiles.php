@@ -1,17 +1,17 @@
 <?php 
-function cptui_register_my_cpts_objets() {
+function cptui_register_my_cpts_tuiles() {
 
 	/**
 	 * Post Type: Objets.
 	 */
 
 	$labels = [
-		"name" => esc_html__( "[2024] Objets", "blankslate" ),
-		"singular_name" => esc_html__( "Objets", "blankslate" ),
+		"name" => esc_html__( "[2025] Tuiles", "blankslate" ),
+		"singular_name" => esc_html__( "Tuiles", "blankslate" ),
 	];
 
 	$args = [
-		"label" => esc_html__( "Objets", "blankslate" ),
+		"label" => esc_html__( "Tuiles", "blankslate" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
@@ -30,13 +30,13 @@ function cptui_register_my_cpts_objets() {
 		"map_meta_cap" => true,
 		"hierarchical" => false,
 		"can_export" => false,
-		"rewrite" => [ "slug" => "objets", "with_front" => true ],
+		"rewrite" => [ "slug" => "tuile", "with_front" => true ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
 		"show_in_graphql" => false,
 	];
 
-	register_post_type( "objets", $args );
+	register_post_type( "tuile", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts_objets' );
+add_action( 'init', 'cptui_register_my_cpts_tuiles' );
