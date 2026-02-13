@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_698f379a4b118",
-            "label": "",
-            "name": "",
+            "label": "Premier champ",
+            "name": "premier_champ",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1770993588
+    "modified": 1770993723
 }

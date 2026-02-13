@@ -517,6 +517,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-2025.php"
             }
         ]
     ],
@@ -529,5 +534,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1770993537
+    "modified": 1770993759
 }
