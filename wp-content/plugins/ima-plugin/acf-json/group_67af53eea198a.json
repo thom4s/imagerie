@@ -1,6 +1,6 @@
 {
     "key": "group_67af53eea198a",
-    "title": "Contenus Modulaires",
+    "title": "Contenus Modulaires ACCUEIL GENERAL",
     "fields": [
         {
             "key": "field_67af53ef5c094",
@@ -529,5 +529,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1769782622
+    "modified": 1770993537
 }
