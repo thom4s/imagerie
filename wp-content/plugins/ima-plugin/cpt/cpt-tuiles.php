@@ -8,7 +8,16 @@ function cptui_register_my_cpts_tuiles() {
 	$labels = [
 		"name" => esc_html__( "[2025] Tuiles", "blankslate" ),
 		"singular_name" => esc_html__( "Tuiles", "blankslate" ),
-	];
+		'menu_name'             => _x( 'Tuiles', 'Admin Menu text', 'textdomain' ),
+		'name_admin_bar'        => _x( 'Tuile', 'Add New on Toolbar', 'textdomain' ),
+		'add_new'               => __( 'Ajouter une Tuile', 'textdomain' ),
+		'add_new_item'          => __( 'Ajouter nouvelle Tuile', 'textdomain' ),
+		'new_item'              => __( 'Nouvelle Tuile', 'textdomain' ),
+		'edit_item'             => __( 'Editer la Tuile', 'textdomain' ),
+		'view_item'             => __( 'Voir Projet', 'textdomain' ),
+		'all_items'             => __( 'Toutes les Tuiles', 'textdomain' ),
+		'search_items'          => __( 'Rechercher Tuile', 'textdomain' )
+		];
 
 	$args = [
 		"label" => esc_html__( "Tuiles", "blankslate" ),
