@@ -25,7 +25,7 @@
             </div>
         </div>
     </section>  
-
+    
 
     <?php get_template_part('Projects/project', get_field('promotion') ); ?>
 
