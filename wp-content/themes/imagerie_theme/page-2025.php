@@ -10,7 +10,6 @@ get_header(); ?>
                     <?php the_content(); ?>
                 </div>
 
-<?php the_field('premier_champ'); ?>
 
     <?php if( have_rows('modules') ):
 

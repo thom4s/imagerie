@@ -1,5 +1,5 @@
 
 
-<?php echo $args['image']; ?>
+<img src="<?php echo $args['image']; ?>" alt="">
 
 <?php echo $args['title']; ?>
