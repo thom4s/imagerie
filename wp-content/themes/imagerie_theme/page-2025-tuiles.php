@@ -1,10 +1,21 @@
 <?php 
     /* template Name: Tuiles Promotion 2025 */
-get_header(); ?>
+get_header();
+
+
+$args = array(
+'post_type' => 'tuile',
+);
+$the_query = new WP_Query( $args );
+
+?>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+
+        <section class="the_content">
+            <div class="the_content_inner">
                 <h1><?php the_title(); ?></h1>
                 <div class="wysiwyg">
                     <?php the_content(); ?>
@@ -12,27 +23,25 @@ get_header(); ?>
 
 
 
-    <?php if( have_rows('modules') ):
+                <?php if ( $the_query->have_posts() ) : ?>
+                    <section>
+                        <h2>Les tuiles</h2>
+                        
+                        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <div class="tuile_item">
+                                <?php the_post_thumbnail(); ?>
+                                <h3><?php echo esc_html( get_the_title() ); ?></h3>
+                                <p><?php the_content(); ?></p>
+                            </div>
+                        <?php endwhile; ?>
 
-        // Loop through rows.
-        while ( have_rows('modules') ) : the_row();
+                    </section>
+                <?php endif; wp_reset_postdata(); ?>
 
-            if( get_row_layout() == 'module_hero' ):
+                
 
-                get_template_part('Components/module', 'hero', array(
-                    'title' =>  get_sub_field('module_title'),
-                    'consigne' => get_sub_field('consigne_scroll'),
-                    'image' => get_sub_field('module_background')
-                )); 
-
-
-            endif;
-
-        // End loop.
-        endwhile;
-
-    endif;
-    ?>
+            </div>
+        </section>
 
 
 

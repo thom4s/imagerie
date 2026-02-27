@@ -5,12 +5,15 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+
+        <section class="the_content">
+            <div class="the_content_inner">
                 <h1><?php the_title(); ?></h1>
                 <div class="wysiwyg">
                     <?php the_content(); ?>
                 </div>
-
-
+            </div>
+        </section>
 
     <?php if( have_rows('modules') ):
 

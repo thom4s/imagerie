@@ -19,14 +19,14 @@ get_header(); ?>
 
             if( get_row_layout() == 'cover' ):
 
-                get_template_part('Components/module', 'hero', array(
+                get_template_part('Components/2025/module', 'cover', array(
                     'image' =>  get_sub_field('background_IMA'),
                     'title' => get_sub_field('cover_title'),
                 )); 
 
-            elseif( get_row_layout() == 'module1' ):
+            elseif( get_row_layout() == 'module_1' ):
 
-                get_template_part('Components/module', 'hero', array(
+                get_template_part('Components/2025/module', 'un', array(
                     'title' =>  get_sub_field('module1_title'),
                     'content' => get_sub_field('module1_content'),
                     'image' => get_sub_field('module1_img'),
