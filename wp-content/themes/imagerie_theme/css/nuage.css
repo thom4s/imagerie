@@ -1,3 +1,27 @@
 body {
-    background-color: red;
 }
+
+
+.tuile_mosaique {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: red;
+  width: 175px;
+  height: 150px;
+  position: absolute;
+}
+
+#tile-container {
+  position: relative;
+  height: 20px;
+}
+
+#module_tuiles_mosaique {
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+
