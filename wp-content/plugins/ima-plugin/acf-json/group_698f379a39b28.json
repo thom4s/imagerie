@@ -370,84 +370,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_698f6067a69dd",
-                            "label": "Video 1 module 3",
-                            "name": "module3__iframe",
-                            "aria-label": "",
-                            "type": "oembed",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "width": "",
-                            "height": "",
-                            "allow_in_bindings": 1
-                        },
-                        {
-                            "key": "field_698f612aa69df",
-                            "label": "Petit texte video",
-                            "name": "module3_content",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_698f613ca69e0",
-                            "label": "Video 2 module 3",
-                            "name": "module3_iframe",
-                            "aria-label": "",
-                            "type": "oembed",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "width": "",
-                            "height": "",
-                            "allow_in_bindings": 1
-                        },
-                        {
-                            "key": "field_698f629a08c3d",
-                            "label": "Petit texte video",
-                            "name": "module3_content",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
                             "key": "field_698f62ad08c3e",
                             "label": "Couleur du module 3 (optionnelle)",
                             "name": "module3_bg",
@@ -465,6 +387,70 @@
                             "enable_opacity": 0,
                             "return_format": "string",
                             "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_69a19eaebcdae",
+                            "label": "Répéteur des vidéo",
+                            "name": "repeteur_des_video",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Ajouter un élément",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_698f6067a69dd",
+                                    "label": "Video 1 module 3",
+                                    "name": "module3__iframe",
+                                    "aria-label": "",
+                                    "type": "oembed",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "width": "",
+                                    "height": "",
+                                    "allow_in_bindings": 1,
+                                    "parent_repeater": "field_69a19eaebcdae"
+                                },
+                                {
+                                    "key": "field_698f612aa69df",
+                                    "label": "Petit texte video",
+                                    "name": "module3_content",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_69a19eaebcdae"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -567,5 +553,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1772198933
+    "modified": 1772206065
 }
