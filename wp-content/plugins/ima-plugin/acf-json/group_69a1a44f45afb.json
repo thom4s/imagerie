@@ -281,9 +281,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post_template",
                 "operator": "==",
-                "value": "post"
+                "value": "page-2025-keywords.php"
             }
         ]
     ],
@@ -296,5 +296,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1772205962
+    "modified": 1772206388
 }
