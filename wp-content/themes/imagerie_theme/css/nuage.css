@@ -130,8 +130,8 @@ p {
 }
 
 .columns > div {
-  width: 50%;
-  flex: 0 0 50%;
+  width: calc(50% - 30px);
+  flex: 0 0 calc(50% - 30px);
 }
 
 .je_module_mosaique_accueil {
