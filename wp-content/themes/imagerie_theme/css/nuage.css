@@ -129,18 +129,13 @@ p {
   padding: 80px 20px;
 }
 
+.columns > div {
+  width: 50%;
+  flex: 0 0 50%;
+}
+
 .je_module_mosaique_accueil {
   flex-direction: row-reverse;
-}
-
-.je_presentation_nuage_content,
-.je_presentation_mosaique_content {
-  flex: 1;
-}
-
-.je_presentation_nuage_image,
-.je_presentation_mosaique_image {
-  flex: 1;
 }
 
 .je_presentation_nuage_image img,
