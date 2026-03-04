@@ -121,9 +121,7 @@ p {
 	font-size: 28px;
 }
 
-
-.je_module_nuage_accueil,
-.je_module_mosaique_accueil {
+.columns {
   display: flex;
   align-items: center;
   justify-content: space-between;
