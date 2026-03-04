@@ -1,6 +1,6 @@
 <?php 
     /* template Name: Tuiles Promotion 2025 */
-get_header();
+get_header('2025');
 wp_enqueue_script('mosaic-script');
 wp_enqueue_style('nuage-style');
 

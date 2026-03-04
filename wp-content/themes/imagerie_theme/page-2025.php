@@ -1,6 +1,9 @@
 <?php 
     /* template Name: Accueil Promotion 2025 */
-get_header(); ?>
+
+    wp_enqueue_style('nuage-style');
+
+get_header('2025'); ?>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

@@ -2,9 +2,165 @@ body {
 }
 
 
+@font-face {
+  font-family: "Mondara";
+  src: url("../fonts/mondara/MondaraSans-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Mondara";
+  src: url("../fonts/mondara/MondaraSans-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Mondara";
+  src: url("../fonts/mondara/MondaraSans-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Mondara";
+  src: url("../fonts/mondara/MondaraSans-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Mondara";
+  src: url("../fonts/mondara/MondaraSans-Book.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Mondara";
+  src: url("../fonts/mondara/MondaraSans-BookItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  font-family: "Mondara", sans-serif ;
+  font-size: 30px;
+}
+
+p {
+  font-family: "Mondara", sans-serif ;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+
+/*  MODULE COVER */
+
+
+.je_bloc_banner_accueil {
+	position: relative;
+} 
+.je_bloc_banner_accueil .wrapper {
+  height: 100%;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+}
+
+.je_titre_site { 
+	font-family: "Mondara", sans-serif;
+	font-size: 80px;
+	font-weight: 500;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.je_titre_site h1 {
+  font-size: inherit;
+  color: white;
+}
+
+.je_soustitre_site {
+	font-family: "Mondara", sans-serif;
+	font-size: 50px;
+  line-height: 1;
+	font-weight: bold;
+	font-style: italic;
+	  color: white;
+
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	text-align: right;
+}
+
+.je_image_header {
+	height: 100%;
+	object-fit: cover;
+
+}
+
+
+/*  MODULE CONTENT */
+
+.je_titre_generique {
+	font-family: "Mondara", serif;
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+.je_soustitre_generique {
+  font-family: "Mondara", serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.je_typo_paragraphe{
+	font-family: "Mondara", serif;
+	font-size: 28px;
+}
+
+
+.je_module_nuage_accueil,
+.je_module_mosaique_accueil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 20px;
+}
+
+.je_module_mosaique_accueil {
+  flex-direction: row-reverse;
+}
+
+.je_presentation_nuage_content,
+.je_presentation_mosaique_content {
+  flex: 1;
+}
+
+.je_presentation_nuage_image,
+.je_presentation_mosaique_image {
+  flex: 1;
+}
+
+.je_presentation_nuage_image img,
+.je_presentation_mosaique_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+/* MOSAIC */ 
 .tuile_mosaique {
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  background-color: red;
   width: 175px;
   height: 150px;
   position: absolute;
@@ -23,5 +179,6 @@ body {
   width: 100%;
   justify-content: center;
 }
+
 
 

@@ -1,6 +1,6 @@
 <?php 
     /* template Name: Mots clés Promotion 2025 */
-get_header(); ?>
+get_header('2025'); ?>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -15,21 +15,28 @@ get_header(); ?>
             </div>
         </section>
 
-    <?php if( have_rows('modules') ):
+    <?php if( have_rows('mots') ):
 
         // Loop through rows.
-        while ( have_rows('modules') ) : the_row();
+        while ( have_rows('mots') ) : the_row();
 
-            if( get_row_layout() == 'module_hero' ):
+            the_sub_field('mot');
 
-                get_template_part('Components/module', 'hero', array(
-                    'title' =>  get_sub_field('module_title'),
-                    'consigne' => get_sub_field('consigne_scroll'),
-                    'image' => get_sub_field('module_background')
-                )); 
+            // Loop over sub repeater rows.
+            if( have_rows('definition_mot') ):
+                while( have_rows('definition_mot') ) : the_row();
 
+                    $forme = get_sub_field('forme');
+                    $question = get_sub_field('questions');
+                    $reponse = get_sub_field('reponses'); ?>
+                    
+                    <img src="<?php echo $forme['url']; ?>">
+                    <?php echo $question; ?>
+                    <?php echo $reponse; ?>
 
+                <?php endwhile;
             endif;
+            
 
         // End loop.
         endwhile;
