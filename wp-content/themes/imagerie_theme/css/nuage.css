@@ -53,9 +53,12 @@ p {
   position: relative;
 }
 
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 /*  MODULE COVER */
-
 
 .je_bloc_banner_accueil {
 	position: relative;
@@ -126,7 +129,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  padding: 80px 20px;
+  padding: 40px 0;
 }
 
 .columns > div {
@@ -175,3 +178,15 @@ p {
 
 
 
+
+
+
+/* Footer */ 
+
+.je_bloc_footer_accueil{
+  background:#403E3E;
+}
+
+.je_footer-liens a {
+  color:#FFFFFF;
+}

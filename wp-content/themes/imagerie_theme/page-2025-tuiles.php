@@ -74,4 +74,4 @@ $the_query = new WP_Query( $args );
 
 <?php endwhile;
 endif; ?>
-<?php get_footer(); ?>
+<?php get_footer('2025'); ?>

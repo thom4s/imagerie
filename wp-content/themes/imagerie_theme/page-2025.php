@@ -33,6 +33,14 @@ get_header('2025'); ?>
                     'btn_url' => get_sub_field('module1_btn_url'),
                 )); 
 
+            elseif( get_row_layout() == 'module_2' ):
+
+                get_template_part('Components/2025/module', 'deux', array(
+                    'title' =>  get_sub_field('module2_title'),
+                    'content' => get_sub_field('module2_content'),
+                    'repeater' => get_sub_field('module2_vignettes_repeteur'),
+                )); 
+
 
             endif;
 
@@ -46,4 +54,4 @@ get_header('2025'); ?>
 
 <?php endwhile;
 endif; ?>
-<?php get_footer(); ?>
+<?php get_footer('2025'); ?>

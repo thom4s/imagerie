@@ -48,4 +48,4 @@ get_header('2025'); ?>
 
 <?php endwhile;
 endif; ?>
-<?php get_footer(); ?>
+<?php get_footer('2025'); ?>

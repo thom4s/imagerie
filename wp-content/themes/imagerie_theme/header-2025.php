@@ -31,7 +31,7 @@
                 </div>
                 
                 <div>
-                    <img src="logo.png" alt="logo">
+                    <img src="<?php echo get_template_directory(); ?>/img/vingtcinq/logo.png" alt="">
                 </div>
 
 
