@@ -151,6 +151,50 @@ section {
 
 
 
+/* ViDEO */
+
+.je_module_video_accueil{
+	padding: 20px 0;
+}
+
+.je_video_couverture{
+	border-radius: 15px;
+	overflow: hidden;
+	border: 3px solid black;
+
+	text-align: center;
+	background:#FFFFFF;
+}
+
+.je_typo_nom{
+	font-family: "Mondara", serif;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.je_typo_sousinfos{
+	font-family: "Mondara", serif;
+	font-size: 25px;
+	font-style: italic;
+}
+
+.position{
+	display:flex;
+}
+
+.position_videos{
+	display:flex;
+	gap: 200px;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.je_image_standard{
+	width:500px;
+	height:400px;
+}
+
+
 
 
 

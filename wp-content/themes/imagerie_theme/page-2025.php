@@ -41,6 +41,13 @@ get_header('2025'); ?>
                     'repeater' => get_sub_field('module2_vignettes_repeteur'),
                 )); 
 
+            elseif( get_row_layout() == 'module_3' ):
+
+                get_template_part('Components/2025/module', 'trois', array(
+                    'bg' =>  get_sub_field('module3_bg'),
+                    'repeater' => get_sub_field('repeteur_des_video'),
+                )); 
+
 
             endif;
 
