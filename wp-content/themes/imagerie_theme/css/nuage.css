@@ -127,7 +127,7 @@ header .wrapper {
 }
 
 .je_image_header {
-	height: 60vh;
+	height: 75vh;
 	object-fit: cover;
   width: 100%;
 }
