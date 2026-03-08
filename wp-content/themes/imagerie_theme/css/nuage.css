@@ -182,7 +182,7 @@ header .wrapper {
 .je_bloc_portrait_accueil img {
   width: 100%;
   object-fit: cover;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/4;
 }
 
 
