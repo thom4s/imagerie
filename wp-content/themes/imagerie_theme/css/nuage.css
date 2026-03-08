@@ -158,6 +158,9 @@ header .wrapper {
   gap: 60px;
   padding: 40px 0;
 }
+.columns.--free > div {
+  flex: 1 1 auto;
+}
 
 .columns > div {
   width: calc(50% - 30px);
@@ -174,6 +177,12 @@ header .wrapper {
   height: auto;
   display: block;
   border-radius: 8px;
+}
+
+.je_bloc_portrait_accueil img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
 }
 
 
