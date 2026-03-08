@@ -1,6 +1,8 @@
+* {
+  box-sizing: border-box;
+}
 body {
 }
-
 
 @font-face {
   font-family: "Mondara";
@@ -47,6 +49,13 @@ p {
   line-height: 1.4;
 }
 
+img {
+  max-width: 100%;
+  display: bloc;
+  height: auto;
+  object-fit: contain;
+}
+
 .wrapper {
   width: 90%;
   margin: auto;
@@ -58,10 +67,28 @@ section {
   padding-bottom: 40px;
 }
 
+
+header {
+  background-color: #4a4644;
+}
+header .wrapper {
+  display: flex;
+  align-items:  center;
+  justify-content: space-between;
+}
+.logo {
+  max-width: 100px;
+}
+.simbolos {
+  max-height: 50px;
+}
+
+
 /*  MODULE COVER */
 
 .je_bloc_banner_accueil {
 	position: relative;
+  padding: 0;
 } 
 .je_bloc_banner_accueil .wrapper {
   height: 100%;
@@ -227,10 +254,57 @@ section {
 
 /* Footer */ 
 
-.je_bloc_footer_accueil{
-  background:#403E3E;
+.footer{
+    background-color:#4a4644;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px 60px;
+    font-family:"Mondara", sans-serif;
 }
 
-.je_footer-liens a {
-  color:#FFFFFF;
+.footer-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.je_logo_ima{
+    width:80px;
+}
+
+.je_typo_ima_gras{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.address{
+    margin:2px 0;
+}
+
+.footer-center{
+    text-align:center;
+    flex:1;
+}
+
+.je_icones_moucharabiehs{
+    width:80px;
+}
+
+.footer-right{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.transport-box{
+    border:2px solid white;
+    border-radius:20px;
+    padding:20px 30px;
+    max-width:350px;
+}
+
+.transport-box p{
+    margin:10px 0;
+    font-size:14px;
 }

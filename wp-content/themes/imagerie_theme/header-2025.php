@@ -21,18 +21,19 @@
             <main id="content" role="main">
                 
             <header>
+                <div class="wrapper">
 
-                <div class="">
-                    <a href="">Retour</a>
+                    <div class="">
+                        <a href="">Retour</a>
+                    </div>
+
+                    <div class="">
+                        <img class="simbolos" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png" alt="">
+                    </div>
+                    
                 </div>
-
-                <div class="">
-                    <img src="<?php echo get_template_directory(); ?>/img/vingtcinq/simbolos.png" alt="">
-                </div>
-                
-                <div>
-                    <img src="<?php echo get_template_directory(); ?>/img/vingtcinq/logo.png" alt="">
-                </div>
-
-
             </header>
