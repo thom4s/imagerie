@@ -27,16 +27,16 @@
                     <h2 class="keyword_trigger"><?php the_sub_field('mot'); ?></h2>
 
                     <?php if( have_rows('definition_mot') ): ?>
-                        <div class="keyword_popin hidden">
+                        <div class="keyword_popin hidden columns">
 
                             <?php while( have_rows('definition_mot') ) : the_row();
 
                                 $forme = get_sub_field('forme');
                                 $question = get_sub_field('questions');
                                 $reponse = get_sub_field('reponses'); ?>
-                                
+
                                     <img src="<?php echo $forme['url']; ?>">
-                                    <?php echo $question; ?>
+                                    <h3><?php echo $question; ?></h3>
                                     <?php echo $reponse; ?>
                             <?php endwhile; ?>
                         </div>
