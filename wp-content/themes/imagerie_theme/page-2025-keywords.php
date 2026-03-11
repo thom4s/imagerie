@@ -27,7 +27,7 @@
                     <h2 class="keyword_trigger"><?php the_sub_field('mot'); ?></h2>
 
                     <?php if( have_rows('definition_mot') ): ?>
-                        <div class="keyword_popin hidden columns">
+                        <div class="keyword_popin hidden columns --free">
 
                             <?php while( have_rows('definition_mot') ) : the_row();
 
