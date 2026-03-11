@@ -317,3 +317,10 @@ header .wrapper {
     margin:10px 0;
     font-size:14px;
 }
+
+
+
+.keyword_item {
+  border-bottom: 1px solid;
+  margin-bottom: 40px;
+}
