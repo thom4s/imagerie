@@ -264,6 +264,8 @@ header .wrapper {
 
 .tuile_item {
   position: absolute;
+  top: 15vh;
+  left: 15vw;
   z-index: 99;
   width: 70vw;
   height: 70vh;
