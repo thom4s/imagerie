@@ -240,6 +240,8 @@ header .wrapper {
   width: 175px;
   height: 150px;
   position: absolute;
+  background-color: aquamarine;
+  cursor: pointer;
 }
 
 #tile-container {
@@ -255,7 +257,33 @@ header .wrapper {
   width: 100%;
   justify-content: center;
 }
+.close_my_parent {
+  cursor: pointer;
 
+}
+
+.tuile_item {
+  position: absolute;
+  z-index: 99;
+  width: 70vw;
+  height: 70vh;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 0 20px black;
+}
+
+
+
+
+/* MOTS CLEFS */
+
+.keyword_item {
+  border-bottom: 1px solid;
+  margin-bottom: 40px;
+}
+.keyword_trigger {
+  cursor: pointer;
+}
 
 
 
@@ -318,9 +346,3 @@ header .wrapper {
     font-size:14px;
 }
 
-
-
-.keyword_item {
-  border-bottom: 1px solid;
-  margin-bottom: 40px;
-}

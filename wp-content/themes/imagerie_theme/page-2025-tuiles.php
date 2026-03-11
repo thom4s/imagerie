@@ -21,21 +21,18 @@ $the_query = new WP_Query( $args );
                 <h1><?php the_title(); ?></h1>
 
                 <div class="module_haut_mosaique">
-                    <div class="bloc_retour">
-                        <a href="index.html"> <img class="bouton_fleche" src="" /></a>
-                        <h4>Retour</h4>
-                    </div>
-                    <a href="nuage.html" class="bouton_fonce">Bascule côté musée</a>
+                    <a href="/repenser-le-musee-de-lima/mots-clefs/" class="bouton_fonce">Bascule côté musée</a>
                     <h3>Cliquez sur une tuile pour en découvrir plus</h3>
                 </div>
 
 
                 <!-- CONTAINER DES TUILES -->
                 <?php if ( $the_query->have_posts() ) : ?>
-                    <section class="hidden">
+                    <section class="">
                     
                         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                            <div class="tuile_item">
+                            <div class="tuile_item hidden" data-id="<?php the_ID(); ?>" data-img="<?php echo get_the_post_thumbnail_url(); ?>">
+                                <button class="close_my_parent">close</button> 
                                 <?php the_post_thumbnail(); ?>
                                 <h3><?php echo esc_html( get_the_title() ); ?></h3>
                                 <p><?php the_content(); ?></p>
@@ -63,6 +60,7 @@ $the_query = new WP_Query( $args );
                 
                 <!-- FORMULAIRE -->
                 <div id="tile-form" class="wysiwyg hidden">
+                    <button class="close_my_parent">close</button>
                     <?php the_content(); ?>
                 </div>
                 
