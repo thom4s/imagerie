@@ -34,10 +34,11 @@
                                 $forme = get_sub_field('forme');
                                 $question = get_sub_field('questions');
                                 $reponse = get_sub_field('reponses'); ?>
-
-                                    <img src="<?php echo $forme['url']; ?>">
-                                    <h3><?php echo $question; ?></h3>
-                                    <?php echo $reponse; ?>
+                                    <div class="">
+                                        <img src="<?php echo $forme['url']; ?>">
+                                        <h3><?php echo $question; ?></h3>
+                                        <?php echo $reponse; ?>
+                                    </div>
                             <?php endwhile; ?>
                         </div>
 
