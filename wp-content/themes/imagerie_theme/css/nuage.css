@@ -240,8 +240,10 @@ header .wrapper {
   width: 175px;
   height: 150px;
   position: absolute;
-  background-color: aquamarine;
   cursor: pointer;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #tile-container {
