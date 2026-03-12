@@ -244,6 +244,7 @@ header .wrapper {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: darkseagreen;
 }
 
 #tile-container {
