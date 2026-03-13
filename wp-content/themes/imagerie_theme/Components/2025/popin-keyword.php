@@ -17,11 +17,10 @@
         <?php $defs = $word['module9_definition_mot']; ?>
 
         <div class="je_titre_module_position">
-          <h3 class="je_titre_generique_module"><?php echo $word['mot']; ?></h3>
+          <h3 class="je_titre_generique_module"><?php echo $word['module9_mot']; ?></h3>
         </div>
 
         <div class="je_popup_mots_module_position">
-
 
             <?php if( $defs ) { foreach( $defs as $def ) { ?>
                   <div class="je_popup_mots_position">
