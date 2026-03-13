@@ -31,7 +31,7 @@
                         src="<?php echo $def['module9_form_question']; ?>"
                       />
                       <h3 class="je_typo_blanc_gras je_popup_mots_position_texte">
-                        <?php echo $def['module9_form_question']; ?>
+                        <?php echo $def['module9_question_text']; ?>
                       </h3>
                     </div>
 
