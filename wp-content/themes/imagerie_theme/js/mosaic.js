@@ -55,6 +55,7 @@ if(tileContainer ) {
   const close_this_tiles = document.querySelectorAll('.close_my_parent');
   close_this_tiles.forEach( el => {
     el.addEventListener('click', () => {
+      console.log('hello')
       console.log(el.closest(".parent"))
       el.closest(".parent").classList.add('hidden')
     })
@@ -69,7 +70,6 @@ const form = document.querySelector('#tile-form');
 const trigger = document.querySelector('#form-trigger');
 trigger.addEventListener('click', event => {
     event.preventDefault();
-
     console.log('triger !')
     form.classList.toggle('hidden');
 
