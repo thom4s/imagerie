@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 @font-face {
   font-family: "Mondara";
   src: url("../../fonts/mondara/MondaraSans-Regular.otf") format("opentype");
