@@ -1,4 +1,4 @@
-<?php $word = $args['row'];  ?>
+<?php $word = $args['word'];  ?>
 
 <div class="keyword hidden popin parent" data-id="<?php echo $args['id']; ?>">
     <div class="inner">

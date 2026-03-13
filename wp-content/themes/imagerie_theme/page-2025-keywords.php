@@ -35,9 +35,7 @@
 
 
 
-    <?php 
-        $rows = get_field('module9_mots');
-    ?>
+    <?php $rows = get_field('module9_mots'); ?>
 
 
         <div class="je_nuage_parent_conteneur">
@@ -103,7 +101,7 @@
 
                 <?php get_template_part('Components/2025/popin', 'keyword', array(
                     'id' => $key,
-                    'row' => $value
+                    'word' => $value
                 )); ?>
                 
             <?php endforeach; ?>
