@@ -48,18 +48,7 @@ if(tileContainer ) {
 
   tileContainer.style.width = `${xDistance * totalColumns}px`;
   moduleTuileMosaique.style.height = `${yDistance * (row + 1)}px`;
-
   console.log("after tileContainer", tileContainer);
-
-
-  const close_this_tiles = document.querySelectorAll('.close_my_parent');
-  close_this_tiles.forEach( el => {
-    el.addEventListener('click', () => {
-      console.log('hello')
-      console.log(el.closest(".parent"))
-      el.closest(".parent").classList.add('hidden')
-    })
-  })
 
 }
 
@@ -72,15 +61,13 @@ trigger.addEventListener('click', event => {
     event.preventDefault();
     console.log('triger !')
     form.classList.toggle('hidden');
-
 })
 
 
 
 /* LIKE  */
 
-const likes = document.querySelectorAll( ".like",
-);
+const likes = document.querySelectorAll( ".like");
 
 likes.forEach( el => {
   el.addEventListener("click", () => {

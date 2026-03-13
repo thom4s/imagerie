@@ -24,6 +24,18 @@ const nuageInit = () => {
     }
 
 
+    const close_my_parent = document.querySelectorAll('.close_my_parent');
+
+    if(close_my_parent) {
+        close_my_parent.forEach( el => {
+            el.addEventListener('click', () => {
+                el.closest(".parent").classList.add('hidden')
+            })
+        })
+        
+    }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', () => nuageInit() )
