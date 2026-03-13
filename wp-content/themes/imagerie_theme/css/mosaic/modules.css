@@ -1,0 +1,84 @@
+.je_header_gauche {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.je_header {
+  background-color: #403e3e;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.je_popup_tuile_haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.je_popup_mot_haut {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.je_popup_tuile_hexagones {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.je_popup_tuile_bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.je_bloc_mosaique_bas {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.je_formulaire_hexagones {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.je_popup_mots_module_position {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+}
+
+.je_mot_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+  width: 20%;
+  padding: 15px;
+}
+
+.je_mot_conteneur_3_2 {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.je_nuage_parent_conteneur {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}

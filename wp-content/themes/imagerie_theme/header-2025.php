@@ -20,20 +20,25 @@
         <div id="container">
             <main id="content" role="main">
                 
-            <header>
-                <div class="wrapper">
 
-                    <div class="">
-                        <a href="">Retour</a>
+                <header class="je_header">
+                    <div class="je_header_gauche">
+                        <div class="je_bouton_retour">
+                            <a href="index.html">
+                                <img class="je_image_fleche" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/arrow.png" />
+                                <p class="je_typo_blanc_gras">Retour</p>
+                            </a>
+                        </div>
+                        <div class="je_header_pictogrammes">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+                        </div>
                     </div>
 
-                    <div class="">
-                        <img class="simbolos" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" alt="">
+                    <div class="je_header_logo">
+                        <a href="https://www.imarabe.org/fr">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png" />
+                        </a>
                     </div>
-                    
-                    <div>
-                        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png" alt="">
-                    </div>
-                    
-                </div>
-            </header>
+                </header>

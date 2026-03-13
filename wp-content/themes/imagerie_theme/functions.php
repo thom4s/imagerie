@@ -27,6 +27,10 @@ function blankslate_enqueue() {
     wp_enqueue_style('main-style', get_template_directory_uri() . '/main.css', array(), filemtime(get_template_directory() . '/main.css'), false);
     wp_register_style('project-style', get_template_directory_uri() . '/css/project.css', array(), filemtime(get_template_directory() . '/css/project.css'), false);
     wp_register_style('nuage-style', get_template_directory_uri() . '/css/nuage.css', array(), filemtime(get_template_directory() . '/css/nuage.css'), false);
+    wp_register_style('nuage-blocs', get_template_directory_uri() . '/css/mosaic/blocs.css', array(), filemtime(get_template_directory() . '/css/mosaic/blocs.css'), false);
+    wp_register_style('nuage-elements', get_template_directory_uri() . '/css/mosaic/elements.css', array(), filemtime(get_template_directory() . '/css/mosaic/elements.css'), false);
+    wp_register_style('nuage-generic', get_template_directory_uri() . '/css/mosaic/generic.css', array(), filemtime(get_template_directory() . '/css/mosaic/generic.css'), false);
+    wp_register_style('nuage-modules', get_template_directory_uri() . '/css/mosaic/modules.css', array(), filemtime(get_template_directory() . '/css/mosaic/modules.css'), false);
 
     // SWIPER
     wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');

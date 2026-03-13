@@ -2,7 +2,11 @@
     /* template Name: Tuiles Promotion 2025 */
 get_header('2025');
 wp_enqueue_script('mosaic-script');
-wp_enqueue_style('nuage-style');
+
+    wp_enqueue_style('nuage-blocs');
+    wp_enqueue_style('nuage-elements');
+    wp_enqueue_style('nuage-generic');
+    wp_enqueue_style('nuage-modules');
 
 $args = array(
 'post_type' => 'tuile',
@@ -15,55 +19,57 @@ $the_query = new WP_Query( $args );
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
-        <section class="the_content">
-            <div class="the_content_inner">
-
-                <h1><?php the_title(); ?></h1>
-
-                <div class="module_haut_mosaique">
-                    <a href="/repenser-le-musee-de-lima/mots-clefs/" class="bouton_fonce">Bascule côté musée</a>
-                    <h3>Cliquez sur une tuile pour en découvrir plus</h3>
-                </div>
+        <section class="wrapper">
+            <div class="">
 
 
-                <!-- CONTAINER DES TUILES -->
-                <?php if ( $the_query->have_posts() ) : ?>
-                    <section class="">
                     
-                        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                            <div class="tuile_item hidden" data-id="<?php the_ID(); ?>" data-img="<?php echo get_the_post_thumbnail_url(); ?>">
-                                <button class="close_my_parent">close</button> 
-                                <?php the_post_thumbnail(); ?>
-                                <h3><?php echo esc_html( get_the_title() ); ?></h3>
-                                <p><?php the_content(); ?></p>
-                            </div>
-                        <?php endwhile; ?>
+            <div class="je_bouton_fonce_position">
+                <div class="je_bouton_fonce">
+                    <a href="nuage.html">Basculez côté musée</a>
+                </div>
+            </div>
 
-                    </section>
+            <div class="je_titre_module_position">
+                <h3 class="je_titre_generique_module"><?php the_title(); ?></h3>
+            </div>
 
-                    <div id="module_tuiles_mosaique">
-                        <div id="tile-container" data-tiles-number="<?php echo $the_query->found_posts?>"></div>
-                    </div>
+            <div id="module_tuiles_mosaique">
+                <div id="tile-container" data-tiles-number="<?php echo $the_query->found_posts?>"></div>
+            </div>
+
+            <div class="je_bloc_mosaique_bas">
+                <div class="je_bloc_mosaique_bas_texte">
+                    <h3 class="je_typo_gras_gris">
+                    Cliquez sur une tuile pour en découvrir plus
+                    </h3>
+                </div>
+                <div class="je_bouton_octogone_mosaique">
+                    <a id="form-trigger" href="formulaire.html">
+                    <img class="je_bouton_octogone" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/bouton_plus.png"
+                    /></a>
+
+                    <h4 class="je_typo_paragraphe_generique">
+                        Une idée à partager ? Cliquez ici pour rajouter votre propre tuile au
+                    mosaïque !
+                    </h4>
+                </div>
+            </div>
+
+
+
+            <!-- CONTAINER DES TUILES -->
+                <?php if ( $the_query->have_posts() ) : ?>
+                        <?php 
+                            while ( $the_query->have_posts() ) :
+                                $the_query->the_post(); 
+                                get_template_part('Components/2025/popin', 'tile'); 
+                        
+                        endwhile; ?>
+
                 <?php endif; wp_reset_postdata(); ?>
-
-
-                <!-- TRIGGER DU FORMULAIRE -->
-                <div class="bloc_mosaique_bas">
-                    <a id="form-trigger"href="formulaire.html"> 
-                        <img class="bouton_octogone" src="" />
-                        <h4>
-                            Une idée à partager ? Cliquez ici pour rajouter votre propre tuile au mosaïque !
-                        </h4>
-                    </a>
-                </div>
-
                 
-                <!-- FORMULAIRE -->
-                <div id="tile-form" class="wysiwyg hidden">
-                    <button class="close_my_parent">close</button>
-                    <?php the_content(); ?>
-                </div>
-                
+                <?php get_template_part('Components/2025/popin', 'form'); ?>
 
             </div>
         </section>

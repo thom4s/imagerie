@@ -2,34 +2,44 @@
 		</main>
 	</div>
 
-	<footer class="footer">
-	
-		<div class="footer-left">
-	<div>
-			<img class="je_logo_ima" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png">
+	<footer class="je_footer">
+		<div class="je_footer_left">
+			<div class="je_footer_logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png" />
+			</div>
+			<p class="je_typo_footer">
+			Institut du monde arabe <br />
+			1 Rue des Fossés Saint Bernard, 75005 Paris
+			</p>
+			<div class="je_footer_simbolos">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
 			</div>
 
-			<div class="address">
-				<p class="je_typo_ima_gras">Institut du Monde Arabe</p>
-				<p class="adress">Rue des Fossés Saint-Bernard, 75005 Paris</p>
+		</div>
+		<div class="je_footer_right">
+			<div class="je_info_transports">
+				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/metro.png" />
+			<p class="je_typo_footer">
+				métro : ligne 7 Jussieu ou ligne 10 Cardinal Lemoine
+			</p>
+			</div>
+			<div class="je_info_transports">
+				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/bus.png" />
+			<p class="je_typo_footer">bus : lignes 24, 63, 67,86,87 et 89</p>
+			</div>
+			<div class="je_info_transports">
+				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/velo.png" />
+			<p class="je_typo_footer">vélo : stations nº 5020, nº5019, nº502</p>
+			</div>
+			<div class="je_info_transports">
+				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/parking.png" />
+			<p class="je_typo_footer">
+				parking : 1, Rue des Fossés Saint Bernard, 75005, Paris
+			</p>
 			</div>
 		</div>
-
-		<div class="footer-center">
-			<div>
-			<img class="je_icones_moucharabiehs" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png">
-			</div>
-	</div>
-
-		<div class="footer-right">
-			<div class="transport-box">
-				<p>Métro : ligne 7 Jussieu ou ligne 10 Cardinal Lemoine</p>
-				<p>Bus : lignes 24, 63, 67, 86, 87 et 89</p>
-				<p>Vélo : stations n° 5020, n°5019, n°502</p>
-				<p>Parking : 1 Rue des Fossés Saint Bernard, 75005, Paris</p>
-			</div>
-		</div>
-
 	</footer>
 	</div>
 

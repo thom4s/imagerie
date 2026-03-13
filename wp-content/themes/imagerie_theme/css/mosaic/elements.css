@@ -1,0 +1,440 @@
+.tuile_mosaique {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: #f9b931;
+  width: 175px;
+  height: 150px;
+  position: absolute;
+  transition-duration: 0.2s;
+}
+
+.tuile_mosaique:hover {
+  opacity: 60%;
+  transform: scale(1.05);
+}
+
+#tile-container {
+  position: relative;
+  height: 20;
+}
+
+#module_tuiles_mosaique {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.je_bouton_fonce {
+  background-color: #f9b931;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.je_bouton_fonce:hover {
+  background-color: #bf860c;
+  cursor: pointer;
+}
+
+.je_bouton_fonce_position {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.je_titre_module_position {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 20px 0;
+}
+
+.je_bouton_retour a {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 15px;
+}
+
+.je_header_pictogrammes {
+  padding-top: 8px;
+  padding-left: 20px;
+  display: flex;
+}
+.je_header_pictogrammes img {
+  max-height: 40px;
+
+}
+
+.je_header_logo {
+  padding-right: 20px;
+}
+.je_header_logo img {
+  max-width: 75px;
+}
+
+.je_popup_tuile_image {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: rouge;
+  width: 42%;
+  height: 42%;
+  aspect-ratio: 1;
+}
+
+.je_popup_tuile_texte {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #103f4f;
+  width: 42%;
+  height: 42%;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.je_tuile_filler_image {
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+.je_popup_tuile_texte_filler {
+  max-width: 80%;
+  max-height: 300px;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+.je_popup_tuile_texte_filler::-webkit-scrollbar {
+  display: none;
+}
+
+.je_like_texte {
+  padding-left: 40px;
+}
+
+.je_coeur_vide {
+  width: 40px;
+  height: 40px;
+  background: #ff5252;
+  clip-path: path(
+    "M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"
+  );
+
+  position: absolute;
+  top: 13px;
+  transform: scale(1.3);
+}
+.je_popup_tuile_bouton_like_position {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.je_coeur_rempli {
+  width: 40px;
+  height: 40px;
+  clip-path: path(
+    "M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+  );
+  position: absolute;
+  cursor: pointer;
+  top: 13px;
+  left: 0px;
+  transform: scale(1.3);
+}
+
+.je_fond_transparent {
+  background: transparent;
+}
+
+.je_fond_rouge {
+  background: #ff5252;
+}
+
+.je_bouton_octogone {
+  margin: 12px;
+}
+
+.je_bloc_mosaique_bas_texte {
+}
+
+.je_champdetexte_prenom {
+  padding-right: 15px;
+}
+
+.je_formulaire_hexagone_image_outer {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 500px;
+  width: 500px;
+  background-color: #103f4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.je_formulaire_hexagone_image_inner {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 480px;
+  width: 480px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.je_formulaire_hexagone_texte {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 500px;
+  width: 500px;
+  background-color: #b3bcbf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.je_formulaire_hexagone_texte_inner {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 480px;
+  width: 480px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.je_bouton-croix_detailmot {
+  padding-right: 30%;
+}
+
+.je_popup_mots_image_taille {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.je_mot_conteneur_style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+}
+
+.je_mot_conteneur_style:hover {
+  background-color: #f9b931;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.je_mot_conteneur_1_1 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+.je_mot_conteneur_1_2 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+.je_mot_conteneur_1_3 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_2_1 {
+  background-color: #103f4f;
+  height: 32%;
+  width: 100%;
+  border-radius: 15px;
+}
+.je_mot_conteneur_2_2 {
+  background-color: #103f4f;
+  height: 62%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_3_1 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_3_2_1 {
+  background-color: #103f4f;
+  height: 95%;
+  width: 45%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_3_2_2 {
+  background-color: #103f4f;
+  height: 95%;
+  width: 45%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_3_3 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_4_1 {
+  background-color: #103f4f;
+  height: 57%;
+  width: 100%;
+  border-radius: 15px;
+}
+.je_mot_conteneur_4_2 {
+  background-color: #103f4f;
+  height: 37%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.je_mot_conteneur_5_1 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+.je_mot_conteneur_5_2 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+.je_mot_conteneur_5_3 {
+  background-color: #103f4f;
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.je_input {
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  padding: 10px 20px;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+  background: #e6e6e2;
+  height: 100%;
+}
+
+.je_prenom_input_conteneur {
+  width: 300px;
+}
+
+.je_prenom_input {
+  font-size: 25px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.je_remarque_input {
+  font-size: 25px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.je_nuage_soustitre {
+  padding-left: 18px;
+  margin: 0;
+  width: 30%;
+}
+
+.je_acceuil_banner_image {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.je_titre_prinicpale {
+  font-family: "Mondara-Serif";
+  font-size: 80px;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  color: white;
+  margin: 0;
+  padding: 0px;
+  text-shadow: 3px 3px 8px #323131;
+}
+
+.je_soustitre_principale {
+  font-family: "Mondara";
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  top: 59%;
+  left: 21%;
+  color: white;
+  margin: 0;
+  padding: 0px;
+  line-height: 100%;
+  text-shadow: 2px 2px 8px #323131;
+}
+
+.je_conteneur_image_cercle {
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.je_image_portrait {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.je_image_conteneur_full_width {
+  object-fit: contain;
+}
+
+.je_espace_blanc {
+  height: 70px;
+  width: 100%;
+  background-color: white;
+}
+
+.je_image_projet {
+  width: 400px;
+  height: 350px;
+  margin-left: 5%;
+  object-fit: cover;
+}
+
+.je_pictogramme_transport {
+  padding: 8px;
+}

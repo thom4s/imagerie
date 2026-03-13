@@ -8,7 +8,11 @@ const nuageInit = () => {
     if(keywords) {
         keywords.forEach( item => {
             item.addEventListener('click', function() {
-                const popin = item.nextElementSibling
+                const id = item.getAttribute('data-id');
+                                console.log( id );
+
+                const popin = document.querySelector(`.keyword[data-id="${id}"`)
+
                 console.log( item );
                 console.log( popin );
                 

@@ -5,8 +5,8 @@ console.log(tileContainer);
 if(tileContainer ) {
 
 
-  const tile_numb = tileContainer.getAttribute("data-tiles-number");
-  console.log(tile_numb);
+  // const tile_numb = tileContainer.getAttribute("data-tiles-number");
+  // console.log(tile_numb);
 
   const tuile_items = document.querySelectorAll('.tuile_item');
   console.log(tuile_items);
@@ -15,7 +15,7 @@ if(tileContainer ) {
   var row = 0;
 
   // parameters you can play with
-  const numberOfTiles = tile_numb;
+  // const numberOfTiles = tile_numb;
   const totalColumns = 3;
 
   const tileWidth = 175;
@@ -24,8 +24,13 @@ if(tileContainer ) {
   // vertical distance between tiles
   const yDistance = 80;
 
+  const count = tuile_items.length
+  console.log(Math.round(count / 3));
+
+
+  
   tuile_items.forEach( el => {
-    for (var column = 0; column < totalColumns; column++) {
+    for (var column = 0; column < Math.round(count / 3); column++) {
       const tile = document.createElement("div");
       tile.className = "tuile_mosaique";
       tile.style.left = `${column * xDistance + (row % 2 ? 140 : 0)}px`;
@@ -41,25 +46,24 @@ if(tileContainer ) {
     row++;
   })
 
-
   tileContainer.style.width = `${xDistance * totalColumns}px`;
   moduleTuileMosaique.style.height = `${yDistance * (row + 1)}px`;
 
   console.log("after tileContainer", tileContainer);
 
 
-  const close_this_tiles = document.querySelectorAll('.close_my_parent')
+  const close_this_tiles = document.querySelectorAll('.close_my_parent');
   close_this_tiles.forEach( el => {
     el.addEventListener('click', () => {
-      console.log(el.parentElement)
-      el.parentElement.classList.add('hidden')
+      console.log(el.closest(".parent"))
+      el.closest(".parent").classList.add('hidden')
     })
   })
 
 }
 
 
-/* TRIGGER */
+/* FORM TRIGGER */
 const form = document.querySelector('#tile-form');
 
 const trigger = document.querySelector('#form-trigger');
@@ -70,3 +74,24 @@ trigger.addEventListener('click', event => {
     form.classList.toggle('hidden');
 
 })
+
+
+
+/* LIKE  */
+
+const likes = document.querySelectorAll( ".like",
+);
+
+likes.forEach( el => {
+  el.addEventListener("click", () => {
+    if (el.classList.contains("je_fond_transparent")) {
+      el.classList.remove("je_fond_transparent");
+      el.classList.add("je_fond_rouge");
+    } else {
+      el.classList.remove("je_fond_rouge");
+      el.classList.add("je_fond_transparent");
+    }
+  });
+
+})
+

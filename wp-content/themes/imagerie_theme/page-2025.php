@@ -1,7 +1,11 @@
 <?php 
     /* template Name: Accueil Promotion 2025 */
 
-    wp_enqueue_style('nuage-style');
+    //wp_enqueue_style('nuage-style');
+    wp_enqueue_style('nuage-blocs');
+    wp_enqueue_style('nuage-elements');
+    wp_enqueue_style('nuage-generic');
+    wp_enqueue_style('nuage-modules');
 
 get_header('2025'); ?>
 

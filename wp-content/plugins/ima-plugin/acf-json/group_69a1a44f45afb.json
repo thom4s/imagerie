@@ -1,11 +1,89 @@
 {
     "key": "group_69a1a44f45afb",
-    "title": "(2025) Accueil nuage de mots",
+    "title": "(2025) Page nuage de mots",
     "fields": [
+        {
+            "key": "field_69a1a8236cffb",
+            "label": "Bouton bascule tuile",
+            "name": "bouton_bascule_tuile",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_69b42a0d9f634",
+                    "label": "Texte du bouton bascule tuile",
+                    "name": "btn_bascule_tuile_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_69b42a259f635",
+                    "label": "Lien du bouton bascule tuile",
+                    "name": "btn_bascule_tuile_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_69a1a4936cffa",
+            "label": "Consigne",
+            "name": "nuage_consigne",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
         {
             "key": "field_69a1a44f6cff9",
             "label": "Nuage de mots",
-            "name": "mots",
+            "name": "module9_mots",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -27,7 +105,7 @@
                 {
                     "key": "field_69a1b50acf7b1",
                     "label": "mot",
-                    "name": "mot",
+                    "name": "module9_mot",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -48,8 +126,8 @@
                 },
                 {
                     "key": "field_69a1a98f527ef",
-                    "label": "définition du mot",
-                    "name": "definition_mot",
+                    "label": "Définition du mot",
+                    "name": "module9_definition_mot",
                     "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
@@ -61,7 +139,6 @@
                         "id": ""
                     },
                     "layout": "table",
-                    "pagination": 0,
                     "min": 0,
                     "max": 0,
                     "collapsed": "",
@@ -71,8 +148,8 @@
                     "sub_fields": [
                         {
                             "key": "field_69a1abf9c4460",
-                            "label": "forme",
-                            "name": "forme",
+                            "label": "forme de la question pour la description",
+                            "name": "module9_form_question",
                             "aria-label": "",
                             "type": "image",
                             "instructions": "",
@@ -98,8 +175,8 @@
                         },
                         {
                             "key": "field_69a1ac7fa22ef",
-                            "label": "Questions",
-                            "name": "questions",
+                            "label": "Question de la description du mot",
+                            "name": "module9_question_text",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -120,10 +197,10 @@
                         },
                         {
                             "key": "field_69a1acd3b1f05",
-                            "label": "réponses",
-                            "name": "reponses",
+                            "label": "Réponse de la description du mot",
+                            "name": "module9_reponse_text",
                             "aria-label": "",
-                            "type": "wysiwyg",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -133,79 +210,19 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "maxlength": "",
                             "allow_in_bindings": 1,
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": "",
                             "parent_repeater": "field_69a1a98f527ef"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "key": "field_69a1a4936cffa",
-            "label": "Consigne",
-            "name": "consigne",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69a1a8236cffb",
-            "label": "Bascule tuile",
-            "name": "bascule_tuile",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69a1a8846cffd",
-            "label": "header nuage de mots",
-            "name": "header_nuage_de_mots",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
+                },
                 {
-                    "key": "field_69a1a8d26cffe",
-                    "label": "logo IMA",
-                    "name": "logo_ima",
+                    "key": "field_69b42b3e86880",
+                    "label": "Forme du mot sur page nuage",
+                    "name": "module9_form",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -226,54 +243,8 @@
                     "max_size": "",
                     "mime_types": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "medium"
-                },
-                {
-                    "key": "field_69a1a8e76cfff",
-                    "label": "Bouton retour",
-                    "name": "bouton_retour",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_69a1a8fe6d000",
-                    "label": "couleur de fond header",
-                    "name": "header_nuagedemots_background",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium"
+                    "preview_size": "medium",
+                    "parent_repeater": "field_69a1a44f6cff9"
                 }
             ]
         }
@@ -296,5 +267,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1772206388
+    "modified": 1773416957
 }
