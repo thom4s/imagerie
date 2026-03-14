@@ -27,7 +27,7 @@ $the_query = new WP_Query( $args );
                     
             <div class="je_bouton_fonce_position">
                 <div class="je_bouton_fonce">
-                    <a href="nuage.html">Basculez côté musée</a>
+                    <a href="https://imagerie.learningprojects.org/repenser-le-musee-de-lima/mots-cles/">Basculez côté musée</a>
                 </div>
             </div>
 

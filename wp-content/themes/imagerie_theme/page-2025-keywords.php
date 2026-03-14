@@ -18,7 +18,7 @@
 
         <div class="je_bouton_fonce_position">
             <div class="je_bouton_fonce">
-                <a href="mosaique.html">Basculez côté public</a>
+                <a href="https://imagerie.learningprojects.org/repenser-le-musee-de-lima/tuiles/">Basculez côté public</a>
             </div>
         </div>
 
