@@ -7,11 +7,11 @@
 
         <div class="je_popup_tuile_haut">
             <button class="je_bouton-croix close_my_parent">
-                <img src="images/bouton croix.png" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/bouton_close.png" />
             </button>
                 
             <div class="je_pictogrammes_popup">
-                <img src="images/Fioritures bleu.png" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
             </div>
             <div class="je_bouton_fonce">
                 <a href="formulaire.html">Créer une tuile</a>
