@@ -30,15 +30,15 @@
                             </a>
                         </div>
                         <div class="je_header_pictogrammes">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+                            <img src="<?php the_field('header_header_simbolos', 'options'); ?>" />
+                            <img src="<?php the_field('header_header_simbolos', 'options'); ?>" />
+                            <img src="<?php the_field('header_header_simbolos', 'options'); ?>" />
                         </div>
                     </div>
 
                     <div class="je_header_logo">
                         <a href="https://www.imarabe.org/fr">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png" />
+                        <img src="<?php the_field('header_header_logo_ima', 'options'); ?>" />
                         </a>
                     </div>
                 </header>

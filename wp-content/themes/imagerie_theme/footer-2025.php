@@ -5,40 +5,30 @@
 	<footer class="je_footer">
 		<div class="je_footer_left">
 			<div class="je_footer_logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/logo.png" />
+				<img src="<?php the_field('footer_footer_logo_ima', 'options'); ?>" />
 			</div>
 			<p class="je_typo_footer">
-			Institut du monde arabe <br />
-			1 Rue des Fossés Saint Bernard, 75005 Paris
+				<?php the_field('footer_footer_adresse', 'options'); ?>
 			</p>
 			<div class="je_footer_simbolos">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
-				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
-				<img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
+				<img src="<?php the_field('footer_footer_simbolos', 'options'); ?>" />
+				<img src="<?php the_field('footer_footer_simbolos', 'options'); ?>" />
 			</div>
 
 		</div>
 		<div class="je_footer_right">
-			<div class="je_info_transports">
-				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/metro.png" />
-			<p class="je_typo_footer">
-				métro : ligne 7 Jussieu ou ligne 10 Cardinal Lemoine
-			</p>
-			</div>
-			<div class="je_info_transports">
-				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/bus.png" />
-			<p class="je_typo_footer">bus : lignes 24, 63, 67,86,87 et 89</p>
-			</div>
-			<div class="je_info_transports">
-				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/velo.png" />
-			<p class="je_typo_footer">vélo : stations nº 5020, nº5019, nº502</p>
-			</div>
-			<div class="je_info_transports">
-				<img class="je_pictogramme_transport" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/parking.png" />
-			<p class="je_typo_footer">
-				parking : 1, Rue des Fossés Saint Bernard, 75005, Paris
-			</p>
-			</div>
+
+			<?php $transports = get_field('footer_footer_transport', 'options'); ?>
+			<?php foreach( $transports as $tr) : ?>
+				<div class="je_info_transports">
+					<img class="je_pictogramme_transport" src="<?php echo $tr['footer_picto_transport']; ?>" />
+					<p class="je_typo_footer">
+						<?php echo $tr['footer_type_de_transport']; ?>
+					</p>
+				</div>
+					
+			<?php endforeach; ?>
+
 		</div>
 	</footer>
 	</div>
