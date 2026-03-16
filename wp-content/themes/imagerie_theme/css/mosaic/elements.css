@@ -106,8 +106,10 @@
 }
 
 .je_tuile_filler_image {
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .je_popup_tuile_texte_filler {

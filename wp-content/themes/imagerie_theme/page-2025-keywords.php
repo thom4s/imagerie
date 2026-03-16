@@ -18,7 +18,7 @@
 
         <div class="je_bouton_fonce_position">
             <div class="je_bouton_fonce">
-                <a href="https://imagerie.learningprojects.org/repenser-le-musee-de-lima/tuiles/">Basculez côté public</a>
+                <a href="<?php the_field('bouton_bascule_tuile_btn_bascule_tuile_url'); ?>"><?php the_field('bouton_bascule_tuile_btn_bascule_tuile_text'); ?></a>
             </div>
         </div>
 
@@ -28,8 +28,7 @@
 
         <div class="je_nuage_soustitre">
             <h3 class="je_typo_gras_gris">
-                Cliquez sur un mot <br />
-                pour en découvrir plus...
+                <?php the_field('nuage_consigne');  ?>
             </h3>
         </div>
 
