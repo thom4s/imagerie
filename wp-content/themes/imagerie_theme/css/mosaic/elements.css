@@ -24,6 +24,7 @@
 }
 
 .je_bouton_fonce {
+  border: none;
   background-color: #f9b931;
   width: fit-content;
   height: fit-content;
@@ -353,6 +354,9 @@
 .je_prenom_input_conteneur {
   width: 300px;
 }
+.je_prenom_input_conteneur {
+  width: 300px;
+}
 
 .je_prenom_input {
   font-size: 25px;
@@ -362,7 +366,7 @@
 
 .je_remarque_input {
   font-size: 25px;
-  width: 200px;
+  width: 350px;
   border-radius: 10px;
 }
 

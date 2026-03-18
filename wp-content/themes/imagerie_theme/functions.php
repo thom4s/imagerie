@@ -129,3 +129,6 @@ function blankslate_image_insert_override($sizes)
     unset($sizes['2048x2048']);
     return $sizes;
 }
+
+
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
