@@ -15,7 +15,7 @@ if(tileContainer ) {
 
   // parameters you can play with
   // const numberOfTiles = tile_numb;
-  const totalColumns = 4;
+  const totalColumns = 6;
 
   // horizontal distance between tiles
   const xDistance = 160;
