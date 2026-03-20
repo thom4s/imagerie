@@ -34,9 +34,8 @@ rowTags[row].classList.add('row');
   for (let index = 0; index < tuile_items.length; index++) { 
 
       let random = Math.floor(Math.random() * column);
-        const tile = document.createElement("div");
+      const tile = document.createElement("div");
 
-      console.log( random, column )
       if( random === column) {
 
         tile.className = "tuile_mosaique";
@@ -74,8 +73,7 @@ rowTags[row].classList.add('row');
         rowTags[row].classList.add('row');
         column = 0;
       } 
-        console.log(rowTags)
-        console.log(rowTags[row].childNodes)
+
 
     }
   tileContainer.appendChild( rowTags[row] );
@@ -94,7 +92,11 @@ const trigger = document.querySelectorAll('.form-trigger');
 trigger.forEach( el => {
     el.addEventListener('click', event => {
       event.preventDefault();
-      console.log('triger !')
+
+      let parents = document.querySelectorAll('.parent')
+      console.log(parents);
+      parents.forEach(el => el.classList.add('hidden') );
+
       form.classList.toggle('hidden');
   })
 })
