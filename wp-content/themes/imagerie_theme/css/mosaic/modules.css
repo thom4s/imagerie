@@ -1,3 +1,7 @@
+section {
+  margin-bottom: 60px;
+}
+
 .je_header_gauche {
   display: flex;
   align-items: center;
