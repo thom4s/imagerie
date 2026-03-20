@@ -177,6 +177,9 @@ iframe {
 .columns.--free > div {
   flex: 1 1 auto;
 }
+.columns.--three > div {
+  flex: 1 1 33%;
+}
 
 .popin {
   width: 100vw;

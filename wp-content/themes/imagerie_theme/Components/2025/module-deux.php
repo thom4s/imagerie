@@ -15,7 +15,7 @@
         </div>
  
         <div class="je_bloc_portrait_accueil">
-            <div class="columns --free">
+            <div class="columns --three">
                 <?php foreach( $repeater as $r ) :
                     $image = $r['module2_vignette'];
                     $legend = $r['module2_legend']; ?>

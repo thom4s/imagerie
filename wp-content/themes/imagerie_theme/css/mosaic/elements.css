@@ -1,8 +1,8 @@
 .tuile_mosaique {
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background-color: #f9b931;
-  width: 175px;
-  height: 150px;
+  width: 150px;
+  height: 175px;
   position: absolute;
   transition-duration: 0.2s;
 }
@@ -14,7 +14,7 @@
 
 #tile-container {
   position: relative;
-  height: 20;
+  width: 100%;
 }
 
 #module_tuiles_mosaique {
@@ -443,4 +443,17 @@
 
 .je_pictogramme_transport {
   padding: 8px;
+}
+
+.je_texte_selection_image {
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 15px;
+}
+
+.je_selection_image_taille {
+  height: 200px;
+  width: 350px;
+  padding: 15px;
+  object-fit: cover;
 }
