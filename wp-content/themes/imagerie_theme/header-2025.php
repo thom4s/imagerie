@@ -24,9 +24,9 @@
                 <header class="je_header">
                     <div class="je_header_gauche">
                         <div class="je_bouton_retour">
-                            <a href="<?php the_field('header_header_bouton_retour_url', 'options'); ?>">
+                            <a href="<?php the_field('header_bouton_retour_header_bouton_retour_url', 'options'); ?>">
                                 <img class="je_image_fleche" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/arrow.png" />
-                                <p class="je_typo_blanc_gras">Retour</p>
+                                <p class="je_typo_blanc_gras"><?php the_field('header_bouton_retour_header_bouton_retour', 'options'); ?></p>
                             </a>
                         </div>
                         <div class="je_header_pictogrammes">
