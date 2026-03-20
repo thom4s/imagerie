@@ -4,7 +4,6 @@
 
 
     <section class="je_conteneur_acceuil_full_width" style="background-color: <?php echo $args['bg_color']; ?>">
-      <div class="">
 
         <div class="wrapper">
             <h3 class="je_soustitre_serif"><?php echo $args['title']; ?></h3>
@@ -30,8 +29,6 @@
                 />
             </div>
         </div>
-
-      </div>
 
     </section>
 
