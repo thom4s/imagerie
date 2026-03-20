@@ -12,7 +12,6 @@
 			</p>
 			<div class="je_footer_simbolos">
 				<img src="<?php the_field('footer_footer_simbolos', 'options'); ?>" />
-				<img src="<?php the_field('footer_footer_simbolos', 'options'); ?>" />
 			</div>
 
 		</div>
