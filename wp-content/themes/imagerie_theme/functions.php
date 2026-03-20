@@ -132,3 +132,20 @@ function blankslate_image_insert_override($sizes)
 
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
+
+/**
+* Filter the upload size limit for non-administrators.
+*
+* @param string $size Upload size limit (in bytes).
+* @return int (maybe) Filtered size limit.
+*/
+function filter_site_upload_size_limit( $size ) {
+// Set the upload size limit to 10 MB for users lacking the 'manage_options' capability.
+if ( ! current_user_can( 'manage_options' ) ) {
+// 10 MB.
+$size = 1024 * 10000;
+}
+return $size;
+}
+add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
