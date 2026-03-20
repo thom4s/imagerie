@@ -11,6 +11,8 @@
             <div class="je_pictogrammes_popup">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
             </div>
+
+            <span></span>
         </div>
 
 
