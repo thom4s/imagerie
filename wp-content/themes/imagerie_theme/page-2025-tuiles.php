@@ -11,6 +11,7 @@
 
 $args = array(
 'post_type' => 'tuile',
+'posts_per_page' => -1
 );
 $the_query = new WP_Query( $args );
 
