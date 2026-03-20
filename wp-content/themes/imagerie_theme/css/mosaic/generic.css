@@ -112,13 +112,15 @@ iframe {
 
 .je_typo_generique_paragraphe {
   color: #454640;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0px;
   padding: 0px;
+  line-height: 1.4;
 }
 
 .je_typo_blanc_gras {
-  font-size: 32px;
+  font-size: 30px;
+  line-height: 1;
   color: white;
   font-weight: bold;
   margin: 0;
