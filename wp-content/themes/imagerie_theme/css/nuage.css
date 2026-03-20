@@ -182,6 +182,7 @@ header .wrapper {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 4/4;
+  padding: 40px;
 }
 
 
