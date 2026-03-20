@@ -47,7 +47,7 @@
 
         <div class="je_popup_tuile_texte_bas">
             <p class="je_typo_gras_gris">
-            Une idée, un commentaire à partager ? Rajoutez votre propre tuile !
+            Une idée, un commentaire à partager ?<br> Rajoutez votre propre tuile !
             </p>
         </div>
         </div>

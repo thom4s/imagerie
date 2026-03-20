@@ -51,8 +51,7 @@ $the_query = new WP_Query( $args );
                     /></a>
 
                     <h4 class="je_typo_paragraphe_generique">
-                        Une idée à partager ? Cliquez ici pour rajouter votre propre tuile au
-                    mosaïque !
+                        Une idée à partager ? <br>Cliquez ici pour rajouter votre propre tuile au mosaïque !
                     </h4>
                 </div>
             </div>
