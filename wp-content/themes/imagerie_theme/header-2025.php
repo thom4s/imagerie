@@ -31,8 +31,6 @@
                         </div>
                         <div class="je_header_pictogrammes">
                             <img src="<?php the_field('header_header_simbolos', 'options'); ?>" />
-                            <img src="<?php the_field('header_header_simbolos', 'options'); ?>" />
-                            <img src="<?php the_field('header_header_simbolos', 'options'); ?>" />
                         </div>
                     </div>
 
