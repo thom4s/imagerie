@@ -59,37 +59,37 @@
             </div>
             <div class="je_mot_column">
                 <div class="je_mot_conteneur_style je_mot_conteneur_3_1">
-                    <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[5]) ? $rows[5]["module9_mot"] : ''; ?></p>
+                    <p class="keyword_trigger je_typo_blanc_gras" data-id="5"><?php echo isset($rows[5]) ? $rows[5]["module9_mot"] : ''; ?></p>
                 </div>
                 <div class="je_mot_conteneur_3_2">
                 <div class="je_mot_conteneur_style je_mot_conteneur_3_2_1">
-                    <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[6]) ? $rows[6]["module9_mot"] : ''; ?></p>
+                    <p class="keyword_trigger je_typo_blanc_gras" data-id="6"><?php echo isset($rows[6]) ? $rows[6]["module9_mot"] : ''; ?></p>
                 </div>
                 <div class="je_mot_conteneur_style je_mot_conteneur_3_2_2">
-                    <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[7]) ? $rows[7]["module9_mot"] : ''; ?></p>
+                    <p class="keyword_trigger je_typo_blanc_gras" data-id="7"><?php echo isset($rows[7]) ? $rows[7]["module9_mot"] : ''; ?></p>
                 </div>
                 </div>
                 <div class="je_mot_conteneur_style je_mot_conteneur_3_3">
-                <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[8]) ? $rows[8]["module9_mot"] : ''; ?></p>
+                <p class="keyword_trigger je_typo_blanc_gras" data-id="8"><?php echo isset($rows[8]) ? $rows[8]["module9_mot"] : ''; ?></p>
                 </div>
             </div>
             <div class="je_mot_column">
                 <div class="je_mot_conteneur_style je_mot_conteneur_4_1">
-                <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[9]) ? $rows[9]["module9_mot"] : ''; ?></p>
+                <p class="keyword_trigger je_typo_blanc_gras" data-id="9"><?php echo isset($rows[9]) ? $rows[9]["module9_mot"] : ''; ?></p>
                 </div>
                 <div class="je_mot_conteneur_style je_mot_conteneur_4_2">
-                <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[10]) ? $rows[10]["module9_mot"] : ''; ?></p>
+                <p class="keyword_trigger je_typo_blanc_gras" data-id="10"><?php echo isset($rows[10]) ? $rows[10]["module9_mot"] : ''; ?></p>
                 </div>
             </div>
             <div class="je_mot_column">
                 <div class="je_mot_conteneur_style je_mot_conteneur_5_1">
-                    <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[11]) ? $rows[11]["module9_mot"] : ''; ?></p>
+                    <p class="keyword_trigger je_typo_blanc_gras" data-id="11"><?php echo isset($rows[11]) ? $rows[11]["module9_mot"] : ''; ?></p>
                 </div>
                 <div class="je_mot_conteneur_style je_mot_conteneur_5_2">
-                    <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[12]) ? $rows[12]["module9_mot"] : ''; ?></p>
+                    <p class="keyword_trigger je_typo_blanc_gras" data-id="12"><?php echo isset($rows[12]) ? $rows[12]["module9_mot"] : ''; ?></p>
                 </div>
                 <div class="je_mot_conteneur_style je_mot_conteneur_5_2">
-                    <p class="keyword_trigger je_typo_blanc_gras"><?php echo isset($rows[13]) ? $rows[13]["module9_mot"] : ''; ?></p>
+                    <p class="keyword_trigger je_typo_blanc_gras" data-id="13"><?php echo isset($rows[13]) ? $rows[13]["module9_mot"] : ''; ?></p>
                 </div>
             </div>
         </div>
