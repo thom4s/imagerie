@@ -90,11 +90,13 @@ rowTags[row].classList.add('row');
 /* FORM TRIGGER */
 const form = document.querySelector('#tile-form');
 
-const trigger = document.querySelector('#form-trigger');
-trigger.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('triger !')
-    form.classList.toggle('hidden');
+const trigger = document.querySelectorAll('.form-trigger');
+trigger.forEach( el => {
+    el.addEventListener('click', event => {
+      event.preventDefault();
+      console.log('triger !')
+      form.classList.toggle('hidden');
+  })
 })
 
 

@@ -46,7 +46,7 @@ $the_query = new WP_Query( $args );
                     </h3>
                 </div>
                 <div class="je_bouton_octogone_mosaique">
-                    <a id="form-trigger" href="formulaire.html">
+                    <a class="form-trigger" href="formulaire.html">
                     <img class="je_bouton_octogone" src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/bouton_plus.png"
                     /></a>
 

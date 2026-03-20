@@ -14,7 +14,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/vingtcinq/simbolos.png" />
             </div>
             <div class="je_bouton_fonce">
-                <a href="formulaire.html">Créer une tuile</a>
+                <a class="form-trigger" href="formulaire.html">Créer une tuile</a>
             </div>
         </div>
 
