@@ -19,13 +19,15 @@
         </div>
 
 
+        <div class="je_tuile_nom_contributeur_conteneur">
+            <h3 class="je_tuile_nom_contributeur">Tuile crée par <?php echo esc_html( get_the_title() ); ?></h3>
+        </div>
 
         <div class="je_popup_tuile_hexagones">
             <div class="je_popup_tuile_image">
                 <img class="je_tuile_filler_image" src="<?php echo get_the_post_thumbnail_url(); ?>" />
             </div>
             <div class="je_popup_tuile_texte">
-                <h3><?php echo esc_html( get_the_title() ); ?></h3>
                 <p class="je_popup_tuile_texte_filler">
                 <?php the_content(); ?>
                 </p>

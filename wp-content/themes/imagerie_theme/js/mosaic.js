@@ -1,3 +1,4 @@
+
 const tileContainer = document.getElementById("tile-container");
 const moduleTuileMosaique = document.getElementById("module_tuiles_mosaique");
 console.log(tileContainer);
@@ -11,42 +12,75 @@ if(tileContainer ) {
   const tuile_items = document.querySelectorAll('.tuile_item');
   console.log(tuile_items);
 
-  var currentTile = 0;
-  var row = 0;
 
   // parameters you can play with
   // const numberOfTiles = tile_numb;
-  const totalColumns = 3;
+  const totalColumns = 4;
 
-  const tileWidth = 175;
   // horizontal distance between tiles
-  const xDistance = 280;
+  const xDistance = 160;
   // vertical distance between tiles
-  const yDistance = 80;
+  const yDistance = 140;
 
   const count = tuile_items.length
-  console.log(Math.round(count / 3));
+
+  let row = 0;
+  let column = 0;
+  let rowTags = [];
+
+rowTags[row] = document.createElement("div");
+rowTags[row].classList.add('row');
+
+  for (let index = 0; index < tuile_items.length; index++) { 
+
+      let random = Math.floor(Math.random() * column);
+        const tile = document.createElement("div");
+
+      console.log( random, column )
+      if( random === column) {
+
+        tile.className = "tuile_mosaique";
+        tile.style.left = `${column * xDistance + (row % 2 ? 80 : 0)}px`;
+        tile.style.top = `${row * yDistance}px`;
+        tile.style.backgroundImage = `url(${tuile_items[index].getAttribute('data-img')})`;
+        const id = tuile_items[index].getAttribute('data-id');
+        tile.id = id;
+        tile.addEventListener('click', () => {
+          tuile_items[index].classList.toggle('hidden')
+        })
+
+      }
+      else {
+        tile.className = "tuile_mosaique";
+        tile.style.left = `${column * xDistance + (row % 2 ? 80 : 0)}px`;
+        tile.style.top = `${row * yDistance}px`;
+        tile.style.backgroundImage = `url(${tuile_items[index].getAttribute('data-img')})`;
+        const id = tuile_items[index].getAttribute('data-id');
+        tile.id = id;
+        tile.addEventListener('click', () => {
+          tuile_items[index].classList.toggle('hidden')
+        })
+      }
 
 
-  
-  tuile_items.forEach( el => {
-    for (var column = 0; column < Math.round(count / 3); column++) {
-      const tile = document.createElement("div");
-      tile.className = "tuile_mosaique";
-      tile.style.left = `${column * xDistance + (row % 2 ? 140 : 0)}px`;
-      tile.style.top = `${row * yDistance}px`;
-      tile.style.backgroundImage = `url(${el.getAttribute('data-img')})`;
-      const id = el.getAttribute('data-id');
-      tile.id = id
-      tile.addEventListener('click', () => {
-        el.classList.toggle('hidden')
-      })
-      tileContainer.appendChild(tile);
+      column++;
+      rowTags[row].appendChild(tile);
+        console.log(index, index % totalColumns)
+
+      if( index !== 0 && index % totalColumns === 0 ) {
+        tileContainer.appendChild( rowTags[row] );
+        row++;
+        rowTags[row] = document.createElement("div");
+        rowTags[row].classList.add('row');
+        column = 0;
+      } 
+        console.log(rowTags)
+        console.log(rowTags[row].childNodes)
+
     }
-    row++;
-  })
+  tileContainer.appendChild( rowTags[row] );
 
-  tileContainer.style.width = `${xDistance * totalColumns}px`;
+  //tileContainer.style.width = `${xDistance * totalColumns}px`;
   moduleTuileMosaique.style.height = `${yDistance * (row + 1)}px`;
   console.log("after tileContainer", tileContainer);
 
