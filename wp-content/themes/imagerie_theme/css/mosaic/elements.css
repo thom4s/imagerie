@@ -3,6 +3,9 @@
   width: 150px;
   height: 175px;
   transition-duration: 0.2s;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .tuile_mosaique:hover {
