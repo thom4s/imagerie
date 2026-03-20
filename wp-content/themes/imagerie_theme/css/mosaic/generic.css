@@ -207,5 +207,5 @@ iframe {
   height: 80vh;
   background-color: white;
   overflow-y: scroll;
-  padding: 40px;
+  padding: 20px 40px;
 }
