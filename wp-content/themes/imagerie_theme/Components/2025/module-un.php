@@ -19,7 +19,7 @@
                 </p>
                 <?php if( $args['btn_url'] !== '' ) : ?>
                     <div class="je_bouton_fonce">
-                        <a href="<?php echo $args['btn_url']; ?>">><?php echo $args['btn_label']; ?></a>
+                        <a href="<?php echo $args['btn_url']; ?>"><?php echo $args['btn_label']; ?></a>
                     </div>
                 <?php endif; ?>
             </div>
