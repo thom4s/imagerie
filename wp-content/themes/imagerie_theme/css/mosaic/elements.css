@@ -383,9 +383,11 @@
 .je_titre_prinicpale {
   font-family: "Mondara-Serif";
   font-size: 80px;
+  line-height: 1;
   position: absolute;
-  top: 3%;
-  left: 3%;
+  top: 25px;
+  left: 25px;
+  right: 25%;
   color: white;
   margin: 0;
   padding: 0px;
@@ -398,13 +400,15 @@
   font-style: italic;
   font-weight: bold;
   position: absolute;
-  top: 59%;
-  left: 21%;
+  bottom: 25px;
+  right: 25px;
+  left: 25%;
   color: white;
   margin: 0;
   padding: 0px;
   line-height: 100%;
   text-shadow: 2px 2px 8px #323131;
+  text-align: right;
 }
 
 .je_conteneur_image_cercle {
