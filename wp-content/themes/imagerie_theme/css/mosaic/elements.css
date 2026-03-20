@@ -411,11 +411,10 @@
 
 .je_conteneur_image_cercle {
   overflow: hidden;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .je_image_portrait {
