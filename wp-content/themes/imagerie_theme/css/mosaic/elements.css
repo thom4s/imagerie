@@ -377,7 +377,7 @@
 .je_acceuil_banner_image {
   object-fit: cover;
   width: 100%;
-  height: 500px;
+  height: 70vh;
 }
 
 .je_titre_prinicpale {
