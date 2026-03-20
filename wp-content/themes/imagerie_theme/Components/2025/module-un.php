@@ -17,9 +17,11 @@
                 <p class="je_typo_paragraphe_generique">
                 <?php echo $args['content']; ?>
                 </p>
-                <div class="je_bouton_fonce">
-                    <a href="<?php echo $args['btn_url']; ?>">><?php echo $args['btn_label']; ?></a>
-                </div>
+                <?php if( $args['btn_url'] !== '' ) : ?>
+                    <div class="je_bouton_fonce">
+                        <a href="<?php echo $args['btn_url']; ?>">><?php echo $args['btn_label']; ?></a>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div>
